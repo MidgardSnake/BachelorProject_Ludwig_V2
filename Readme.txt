@@ -16,12 +16,12 @@ git init
 git add README.md
 git commit -m "first commit"
 git branch -M main
-git remote add origin https://github.com/MidgardSnake/BachelorProject_Ludwig_V2.git
+git remote add origin "URL zum repository"
 git push -u origin main
 
 
 ####falls du ein repository erstellt hast, dann musst du nur das machen:
-git remote add origin https://github.com/MidgardSnake/BachelorProject_Ludwig_V2.git
+git remote add origin "URL zum repository"
 git branch -M main
 git push -u origin main
 
