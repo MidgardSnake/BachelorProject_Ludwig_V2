@@ -109,8 +109,8 @@ def version3():
         'host': "localhost",
         'port': "5432"
     }
-    download_dir = '/Users/lui/PycharmProjects/pythonProject/venv/downloadFile/'
-    queries_folder_path = '/Users/lui/PycharmProjects/pythonProject/venv/Queries/JOB_Queries'
+    download_dir = '/Users/lui/BachelorThesis_Ludwig_V1/downloadFile'
+    queries_folder_path = '/Users/lui/BachelorThesis_Ludwig_V1/Queries/JOB_Queries'
     result_file_path = os.path.join(download_dir, "query_costs_EXPLAIN.txt")
     time_file_path = os.path.join(download_dir, "execution_times_EXPLAIN.txt")
 

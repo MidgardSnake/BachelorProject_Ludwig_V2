@@ -1,3 +1,10 @@
+###############Google Docs ShareLink mit Stefan
+https://docs.google.com/document/d/1aGwIvNbmDHOy7-iSW9quUbemvGnu29EU7zjeV2ZWX2o/edit?hl=de&pli=1
+
+
+
+
+
 Git Ablauf
 
 1.  git init
