@@ -30,4 +30,4 @@ git push -u origin main
 
 5.git push -u origin main
 User= MidgardSerpent
-Pw= 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
+Pw= schaue auf github nach deinem personal access token in den settings deines profils
