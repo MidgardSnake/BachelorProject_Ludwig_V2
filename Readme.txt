@@ -43,7 +43,33 @@ Pw= schaue auf github nach deinem personal access token in den settings deines p
 ### dann bist du normalerweise fertig.
 ------------------------------------------------------------------------
 
-###wenn du mal bullshit stagest, kannst du deinen stage auch wieder rückgängig machen,
+###wenn du mal quatsch stagest, kannst du deinen stage auch wieder rückgängig machen,
 zB bei der Klasse Optimizer_Code/TablePlotter.py:
 
 git restore -s HEAD -SW Optimizer_Code/TablePlotter.py
+
+
+------------------------------------------------------------------------
+
+##hier noch eine anweisung, wie die idea files entfernt wurden. im Projektordner ins terminal navigieren
+##dann:
+git rm -r --cached .idea
+
+##dann git status um nochmal zu gucken, was noch comitted werden kann
+
+#dann
+git commit -m "Remove .idea from repository"
+
+##dann neue gitignore datei erstellen + idea zum ignore file hinzufügen
+touch .gitignore
+echo ".idea" >> .gitignore
+
+##dann ignore stagen und comitten
+git add .gitignore
+git commit -m "Update .gitignore to exclude .idea"
+
+##dann pushen
+git push
+
+
+
