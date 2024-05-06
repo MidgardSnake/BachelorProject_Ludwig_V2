@@ -3,7 +3,7 @@ import random
 
 def generate_data(num_entries, num_anomalies):
     # Pfad zur Datei, in der die Daten gespeichert werden
-    file_path = '/Users/lui/PycharmProjects/BachelorProject_Ludwig_V2/DummyTable/downloadData/insert_data.txt'
+    file_path = '/DummyTable/ImportData/insert_data.txt'
 
     # Eröffnen der Datei zum Schreiben
     with open(file_path, 'w') as f:

@@ -39,6 +39,6 @@ def plot_distribution(file_path):
 
 
 # Pfad zur Datei, passe diesen an deinen Dateipfad an
-file_path = '/Users/lui/PycharmProjects/BachelorProject_Ludwig_V2/DummyTable/downloadData/insert_data.txt'
+file_path = '/DummyTable/downloadData/insert_data.txt'
 plot_distribution(file_path)
 

@@ -2,6 +2,8 @@ SELECT * FROM "DummyTable";
 
 EXPLAIN SELECT * FROM "DummyTable";
 
+SELECT poisson_distribution FROM "DummyTable" WHERE poisson_distribution >0;
+
 EXPLAIN ANALYZE VERBOSE SELECT normal_distribution FROM "DummyTable";
 
 
