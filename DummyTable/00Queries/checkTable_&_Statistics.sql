@@ -38,6 +38,33 @@ FROM
     pg_stats
 WHERE
     tablename = 'DummyTable' AND
-    attname = 'normal_distribution';
+    attname = 'normal_distribution' ;
+
+
+EXPLAIN ANALYZE SELECT normal_distribution, poisson_distribution FROM "DummyTable" WHERE normal_distribution <500;
+
+
+EXPLAIN SELECT normal_distribution, poisson_distribution FROM "DummyTable" WHERE normal_distribution <500 ORDER BY normal_distribution;
+
+
+SELECT Count(*) FROM "DummyTable" WHERE normal_distribution<500;
+
+SELECT
+    *
+    --relpages, reltuples
+FROM pg_class WHERE relname = 'DummyTable';
+
+
+/*Statistiken*/
+SELECT
+    *
+    --relpages, reltuples
+    --correlation
+FROM pg_stats
+WHERE tablename = 'DummyTable' AND attname = 'normal_distribution';
+
+SELECT AVG(normal_distribution) FROM "DummyTable";
+
+SELECT * FROM "DummyTable";
 
 

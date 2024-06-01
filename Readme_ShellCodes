@@ -1,0 +1,10 @@
+--Verbindungsaufbau mit PSQL
+
+ psql -U postgres -h localhost -p 5432 -l
+
+ Pw = DKBLV1993
+
+ psql postgres  -- oder JoinOrderBenchmark, je nachdem was du brauchst
+
+ SELECT * FROM "DummyTabelle";
+

@@ -1,14 +1,13 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-
 def plot_distribution(file_path):
     # Einlesen der Daten
     data = pd.read_csv(file_path, header=None)
-    data.columns = ['Normal', 'Poisson', 'Exponential', 'Uniform', 'Random']
+    data.columns = ['Normal', 'Poisson', 'Exponential', 'Uniform', 'Random', 'Modulo']
 
     # Farben für die Graphen definieren
-    colors = ['blue', 'green', 'red', 'orange', 'purple']
+    colors = ['blue', 'green', 'red', 'orange', 'purple', 'brown']
 
     # Plot erstellen
     plt.figure(figsize=(12, 8))
@@ -37,8 +36,6 @@ def plot_distribution(file_path):
     # Ergebnis zeigen
     plt.show()
 
-
 # Pfad zur Datei, passe diesen an deinen Dateipfad an
-file_path = '/DummyTable/downloadData/insert_data.txt'
+file_path = '/Users/lui/PycharmProjects/BachelorProject_Ludwig_V2/DummyTable/ImportData/insert_data.txt'
 plot_distribution(file_path)
-

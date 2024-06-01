@@ -14,9 +14,12 @@ Git Ablauf
 #########wenn code aktualisiert werden muss, dann erstmal stagen ###########
 3. git add XXXXXgemäß statusXXXXX
 
+oder git add .
+
 ------------------------------------------------------------------------
 ########dann commiten lokal#####################################
 4. git commit -m "lokaler commit deines codes"
+
 
 #####dann zum remote repository verknüpfen .. entweder es existiert noch nicht in github, dann musst du
 echo "# BachelorProject_Ludwig_V2" >> README.md
