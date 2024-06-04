@@ -37,5 +37,5 @@ def plot_distribution(file_path):
     plt.show()
 
 # Pfad zur Datei, passe diesen an deinen Dateipfad an
-file_path = '/Users/lui/PycharmProjects/BachelorProject_Ludwig_V2/DummyTable/ImportData/insert_data.txt'
+file_path = '/DummyTable/00ImportData/insert_data.txt'
 plot_distribution(file_path)
