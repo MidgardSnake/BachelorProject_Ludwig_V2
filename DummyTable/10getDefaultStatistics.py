@@ -1,7 +1,6 @@
 import psycopg2
 from prettytable import PrettyTable
 
-
 def analyze_and_fetch_stats():
     # Connection data
     conn = psycopg2.connect(
@@ -15,12 +14,14 @@ def analyze_and_fetch_stats():
     # Create cursor to execute SQL commands
     cur = conn.cursor()
 
-    # Run ANALYZE command on table1
-    cur.execute("ANALYZE table1;")
-
-    # Queries to fetch table statistics
+    # Tables to analyze and fetch statistics for
     tables = ['table1', 'table2', 'table3']
     for table in tables:
+        # Run ANALYZE command on each table
+        cur.execute(f"ANALYZE {table};")
+        print(f"ANALYZE completed for {table}")
+
+        # Queries to fetch table statistics
         print(f"Statistics for {table}:")
         cur.execute("""
         SELECT *
@@ -29,16 +30,13 @@ def analyze_and_fetch_stats():
         """, (table,))
 
         # Fetch and print the result
+        columns = [desc[0] for desc in cur.description]
         results = cur.fetchall()
         if results:
-            # Create a PrettyTable
             table_output = PrettyTable()
-            # Add columns to the table
-            table_output.field_names = [desc[0] for desc in cur.description]
-            # Add rows to the table
+            table_output.field_names = columns
             for row in results:
                 table_output.add_row(row)
-            # Print the table with a nice format
             print(table_output)
         else:
             print("No data found.")
@@ -47,7 +45,6 @@ def analyze_and_fetch_stats():
     # Close cursor and connection
     cur.close()
     conn.close()
-
 
 # Call the function
 analyze_and_fetch_stats()
