@@ -16,19 +16,19 @@ def populate_tables():
     # SQL-Befehle zum Einfügen der Daten in table1, table2 und table3
     try:
         cursor.execute("""
-            INSERT INTO table1 (nummer, modulo)
+            INSERT INTO table1 (nkey, ndependency)
             SELECT i, floor(random() * 101)::INT FROM generate_series(0, 2999999) AS s(i);
         """)
         connection.commit()  # Änderungen in der Datenbank speichern
 
         cursor.execute("""
-            INSERT INTO table2 (nummer, modulo)
+            INSERT INTO table2 (nkey, ndependency)
             SELECT i, floor(random() * 101)::INT FROM generate_series(0, 4999999) AS s(i);
         """)
         connection.commit()
 
         cursor.execute("""
-            INSERT INTO table3 (nummer, modulo)
+            INSERT INTO table3 (nkey, ndependency)
             SELECT i, floor(random() * 101)::INT FROM generate_series(0, 6999999) AS s(i);
         """)
         connection.commit()

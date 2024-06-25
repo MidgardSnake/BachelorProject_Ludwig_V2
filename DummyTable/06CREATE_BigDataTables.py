@@ -28,7 +28,7 @@ class DatabaseManager:
         if self.conn is not None:
             with self.conn.cursor() as cursor:
                 try:
-                    query = sql.SQL("CREATE TABLE {table_name} (nummer BIGINT, modulo INT);").format(
+                    query = sql.SQL("CREATE TABLE {table_name} (nkey BIGINT, ndependency INT);").format(
                         table_name=sql.Identifier(table_name)
                     )
                     cursor.execute(query)

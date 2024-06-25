@@ -17,20 +17,20 @@ def populate_tables():
     try:
         # Use floor division by casting the division result to an integer
         cursor.execute("""
-            INSERT INTO table1 (nummer, modulo)
-            SELECT i, (i / 50)::int + 1 FROM generate_series(0, 2999999) AS s(i);
+            INSERT INTO table1 (nkey, ndependency)
+            SELECT i, (i / 10)::int + 1 FROM generate_series(0, 2999999) AS s(i);
         """)
         connection.commit()  # Änderungen in der Datenbank speichern
 
         cursor.execute("""
-            INSERT INTO table2 (nummer, modulo)
-            SELECT i, (i / 50)::int + 1 FROM generate_series(0, 4999999) AS s(i);
+            INSERT INTO table2 (nkey, ndependency)
+            SELECT i, (i / 10)::int + 1 FROM generate_series(0, 4999999) AS s(i);
         """)
         connection.commit()
 
         cursor.execute("""
-            INSERT INTO table3 (nummer, modulo)
-            SELECT i, (i / 50)::int + 1 FROM generate_series(0, 6999999) AS s(i);
+            INSERT INTO table3 (nkey, ndependency)
+            SELECT i, (i / 10)::int + 1 FROM generate_series(0, 6999999) AS s(i);
         """)
         connection.commit()
 
