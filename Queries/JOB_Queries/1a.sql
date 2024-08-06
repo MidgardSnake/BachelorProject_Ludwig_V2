@@ -64,12 +64,8 @@ FROM movie_companies
 WHERE note NOT LIKE '%(as Metro-Goldwyn-Mayer Pictures)%' AND (note LIKE '%(co-production)%'OR note LIKE '%(presents)%');
 ;
 
-EXPLAIN ANALYZE SELECT *
-FROM movie_companies
-WHERE note NOT LIKE '%(as Metro-Goldwyn-Mayer Pictures)%' AND (note LIKE '%(co-production)%'OR note LIKE '%(presents)%')
-AND note is not null
-;
 
-CREATE STATISTICS mcv_stats_Q1a ON note FROM movie_companies;
-ANALYZE movie_companies;
+
+
+
 
