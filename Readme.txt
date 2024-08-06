@@ -73,6 +73,3 @@ git commit -m "Update .gitignore to exclude .idea"
 
 ##dann pushen
 git push
-
-
-

@@ -1,60 +1,53 @@
--- Zuerst Statistiken zurücksetzen mit vaccuum full -- dauert etwas
-VACUUM FULL ANALYZE;
-
-
-ALTER SYSTEM SET autovacuum = off; -- autovacuum ausschalten
-ALTER SYSTEM SET autovacuum_analyze_threshold = 1000000;
-ALTER SYSTEM SET autovacuum_analyze_scale_factor = 0;
-
-SELECT pg_reload_conf(); -- umsetzung bestätigen lassen
-
-EXPLAIN ANALYSE     -- ausführung einer query mit ausführungszeit
-SELECT MIN(mc.note) AS production_note,
-       MIN(t.title) AS movie_title,
-       MIN(t.production_year) AS movie_year
-FROM company_type AS ct,
+EXPLAIN SELECT MIN(cn.name) AS producing_company,
+       MIN(miidx.info) AS rating,
+       MIN(t.title) AS movie
+FROM company_name AS cn,
+     company_type AS ct,
      info_type AS it,
+     info_type AS it2,
+     kind_type AS kt,
      movie_companies AS mc,
-     movie_info_idx AS mi_idx,
+     movie_info AS mi,
+     movie_info_idx AS miidx,
      title AS t
-WHERE ct.kind = 'production companies'
-  AND it.info = 'top 250 rank'
-  AND mc.note NOT LIKE '%(as Metro-Goldwyn-Mayer Pictures)%'
-  AND (mc.note LIKE '%(co-production)%'
-       OR mc.note LIKE '%(presents)%')
+WHERE cn.country_code ='[us]'
+  AND ct.kind ='production companies'
+  AND it.info ='rating'
+  AND it2.info ='release dates'
+  AND kt.kind ='movie'
+  AND mi.movie_id = t.id
+  AND it2.id = mi.info_type_id
+  AND kt.id = t.kind_id
+  AND mc.movie_id = t.id
+  AND cn.id = mc.company_id
   AND ct.id = mc.company_type_id
-  AND t.id = mc.movie_id
-  AND t.id = mi_idx.movie_id
-  AND mc.movie_id = mi_idx.movie_id
-  AND it.id = mi_idx.info_type_id;
+  AND miidx.movie_id = t.id
+  AND it.id = miidx.info_type_id
+  AND mi.movie_id = miidx.movie_id
+  AND mi.movie_id = mc.movie_id
+  AND miidx.movie_id = mc.movie_id;
 
 
-
-ALTER SYSTEM SET autovacuum = on; -- Statistiken wieder an schalten
-ALTER SYSTEM SET autovacuum_analyze_threshold = 50;
-ALTER SYSTEM SET autovacuum_analyze_scale_factor = 0.1;
-
--- Änderungen laden
-SELECT pg_reload_conf();
-
-
-EXPLAIN ANALYSE
-SELECT MIN(mc.note) AS production_note,
-       MIN(t.title) AS movie_title,
-       MIN(t.production_year) AS movie_year
-FROM company_type AS ct,
+SELECT *
+FROM  company_name AS cn,
+     company_type AS ct,
      info_type AS it,
+     info_type AS it2,
+     kind_type AS kt,
      movie_companies AS mc,
-     movie_info_idx AS mi_idx,
+     movie_info AS mi,
+     movie_info_idx AS miidx,
      title AS t
-WHERE ct.kind = 'production companies'
-  AND it.info = 'top 250 rank'
-  AND mc.note NOT LIKE '%(as Metro-Goldwyn-Mayer Pictures)%'
-  AND (mc.note LIKE '%(co-production)%'
-       OR mc.note LIKE '%(presents)%')
+WHERE mi.movie_id = t.id
+  AND it2.id = mi.info_type_id
+  AND kt.id = t.kind_id
+  AND mc.movie_id = t.id
+  AND cn.id = mc.company_id
   AND ct.id = mc.company_type_id
-  AND t.id = mc.movie_id
-  AND t.id = mi_idx.movie_id
-  AND mc.movie_id = mi_idx.movie_id
-  AND it.id = mi_idx.info_type_id;
-
+  AND miidx.movie_id = t.id
+  AND it.id = miidx.info_type_id
+  AND mi.movie_id = miidx.movie_id
+  AND mi.movie_id = mc.movie_id
+  AND miidx.movie_id = mc.movie_id
+  AND kt.kind ='movie'
+;
