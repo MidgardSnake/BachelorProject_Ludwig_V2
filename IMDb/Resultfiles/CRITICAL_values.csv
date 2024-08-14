@@ -1,0 +1,40 @@
+Query Name,Estimated Rows,Actual Rows,Relation Name,Node Type,Join Type,Scan Direction,Parent Node Type
+10c.sql :,175521,3,XXX,Hash Join,Inner,XXX,Aggregate
+10c.sql :,175521,3,XXX,Hash Join,Inner,XXX,Hash Join
+10c.sql :,175521,3,XXX,Nested Loop,Inner,XXX,Hash Join
+12b.sql :,1458,1,XXX,Hash Join,Inner,XXX,Nested Loop
+12b.sql :,5089,3,XXX,Hash,XXX,XXX,Hash Join
+12b.sql :,5089,3,XXX,Hash Join,Inner,XXX,Hash
+1a.sql :,5089,83,XXX,Hash Join,Inner,XXX,Hash Join
+1b.sql :,962,1,XXX,Nested Loop,Inner,XXX,Aggregate
+1b.sql :,3382,2,XXX,Hash Join,Inner,XXX,Nested Loop
+1b.sql :,13531,33,XXX,Hash Join,Inner,XXX,Hash Join
+1b.sql :,5089,3,XXX,Hash,XXX,XXX,Hash Join
+1b.sql :,5089,3,XXX,Hash Join,Inner,XXX,Hash
+1c.sql :,4,1,XXX,Nested Loop,Inner,XXX,Aggregate
+1c.sql :,26,8,XXX,Hash Join,Inner,XXX,Nested Loop
+1c.sql :,5089,83,XXX,Hash Join,Inner,XXX,Hash Join
+1d.sql :,1838,1,XXX,Nested Loop,Inner,XXX,Aggregate
+1d.sql :,3382,2,XXX,Hash Join,Inner,XXX,Nested Loop
+1d.sql :,13531,33,XXX,Hash Join,Inner,XXX,Hash Join
+1d.sql :,5089,3,XXX,Hash,XXX,XXX,Hash Join
+1d.sql :,5089,3,XXX,Hash Join,Inner,XXX,Hash
+29a.sql :,4690,1510,XXX,Hash Join,Inner,XXX,Hash Join
+29b.sql :,18728,4705,XXX,Hash Join,Inner,XXX,Hash Join
+29c.sql :,4690,1510,XXX,Hash Join,Inner,XXX,Hash Join
+33a.sql :,54,13,XXX,Hash,XXX,XXX,Hash Join
+33a.sql :,54,13,XXX,Nested Loop,Inner,XXX,Hash
+33a.sql :,54,13,XXX,Hash Join,Inner,XXX,Nested Loop
+33c.sql :,144,32,XXX,Nested Loop,Inner,XXX,Hash Join
+33c.sql :,144,32,XXX,Hash Join,Inner,XXX,Nested Loop
+5c.sql :,20028,223,XXX,Hash Join,Inner,XXX,Aggregate
+5c.sql :,20028,223,XXX,Nested Loop,Inner,XXX,Hash Join
+5c.sql :,29055,230,XXX,Hash Join,Inner,XXX,Nested Loop
+5c.sql :,21938,266,XXX,Hash,XXX,XXX,Hash Join
+5c.sql :,21938,266,XXX,Hash Join,Inner,XXX,Hash
+8c.sql :,2676619,829204,XXX,Hash Join,Inner,XXX,Aggregate
+8d.sql :,2676619,107668,XXX,Hash Join,Inner,XXX,Aggregate
+8d.sql :,1104332,95179,XXX,Hash,XXX,XXX,Hash Join
+8d.sql :,1104332,95179,XXX,Nested Loop,Inner,XXX,Hash
+8d.sql :,1104332,95179,XXX,Hash Join,Inner,XXX,Nested Loop
+8d.sql :,1259900,92134,XXX,Hash Join,Inner,XXX,Hash Join
