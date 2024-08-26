@@ -14,7 +14,10 @@ Git Ablauf
 #########wenn code aktualisiert werden muss, dann erstmal stagen ###########
 3. git add XXXXXgemäß statusXXXXX
 
-oder git add .
+oder 
+```bash
+git add .
+```
 
 ------------------------------------------------------------------------
 ########dann commiten lokal#####################################
