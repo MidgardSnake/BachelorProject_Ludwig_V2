@@ -83,7 +83,7 @@ WHERE tablename =  'movie_info'
 ; --relpages =161.521; reltuples = 14.873.344 <> 14.835.720
 
 
-SELECT attname, n_distinct, most_common_vals, most_common_freqs, histogram_bounds, correlation
+SELECT *--attname, n_distinct, most_common_vals, most_common_freqs, histogram_bounds, correlation
 FROM pg_stats
 WHERE tablename =  'movie_info_idx';
 --relpages =7935; reltuples = 1.380.035 = 1.380.035

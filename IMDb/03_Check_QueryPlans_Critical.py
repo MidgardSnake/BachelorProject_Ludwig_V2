@@ -25,7 +25,9 @@ def parse_plan(plan, parent_info=""):
     # Initial check on the current level
     deviations = []
     if actual_rows > 0:
-        deviation = abs(estimated_rows - actual_rows) / actual_rows
+        deviation_1 = abs(estimated_rows - actual_rows) / actual_rows
+        deviation_2 = abs(estimated_rows - actual_rows) / estimated_rows if estimated_rows != 0 else float('inf')
+        deviation = max(deviation_1, deviation_2)
         deviations.append((estimated_rows, actual_rows, deviation, additional_info))
 
     # Check for nested plans
@@ -35,7 +37,6 @@ def parse_plan(plan, parent_info=""):
 
     return deviations
 
-# je nach gewünschter sensibilität den bias ändern
 def identify_critical_misestimates(input_file, output_csv, threshold=2.0):
     critical_entries = []
 
@@ -88,8 +89,8 @@ def identify_critical_misestimates(input_file, output_csv, threshold=2.0):
 
     print(f"Critical misestimates have been identified and saved to {output_csv}")
 
-
 # Aufruf der Funktion
 input_file = '/Users/lui/PycharmProjects/BachelorProject_Ludwig_V2/IMDb/Resultfiles/explain_analysis_results.csv'
-output_csv = '/Users/lui/PycharmProjects/BachelorProject_Ludwig_V2/IMDb/Resultfiles/CRITICAL_values.csv'
+output_csv = '/Users/lui/PycharmProjects/BachelorProject_Ludwig_V2/IMDb/Resultfiles/CRITICAL_values_V2.csv'
 identify_critical_misestimates(input_file, output_csv)
+

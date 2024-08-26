@@ -3,7 +3,9 @@ ANALYZE dummytable;
 
 SELECT *
 FROM pg_stats
-WHERE tablename = 'dummytable';
+WHERE tablename = 'dummytable' AND attname = 'exponential_dist';
+
+SELECT COUNT(*) FROM Dummytable;
 
 
 
