@@ -18,6 +18,9 @@ WHERE ct.kind = 'production companies'
   AND mc.movie_id = mi_idx.movie_id
   AND it.id = mi_idx.info_type_id;
 
+
+SELECT  Count(*)
+FROM movie_companies m, company_type ;
 -------------------------------------------------------
 --1. Default Statistiken anschauen
 SELECT attname, n_distinct, most_common_vals, most_common_freqs, histogram_bounds, correlation
