@@ -53,5 +53,5 @@ class QueryAnalyzer:
         self.plot_deviation()
 
 # Example usage:
-analyzer = QueryAnalyzer('/Users/lui/PycharmProjects/BachelorProject_Ludwig_V2/IMDb/Resultfiles/CRITICAL_values_V2.csv')
+analyzer = QueryAnalyzer('/IMDb/Resultfiles/CRITICAL_values_bias2.0.csv')
 analyzer.analyze_and_plot()
