@@ -14,7 +14,7 @@ class QueryAnalyzer:
 
     def filter_queries(self):
         # Filter for queries that end with 'a', using a regex pattern
-       # self.df = self.df[self.df['Query Name'].apply(lambda x: bool(re.match(r'.*a\.sql', x)))]
+        #self.df = self.df[self.df['Query Name'].apply(lambda x: bool(re.match(r'.*a\.sql', x)))]
         # Remove whitespace from column names and clean data
         self.df.columns = self.df.columns.str.strip()
         self.df = self.df.dropna()
@@ -27,9 +27,8 @@ class QueryAnalyzer:
         self.df = self.df.dropna(subset=['Estimated Rows', 'Actual Rows'])
 
     def calculate_deviation(self):
-        # Calculate percentage deviation
-        self.df['Deviation (%)'] = (self.df['Actual Rows'] - self.df['Estimated Rows']).abs() / self.df[
-            'Estimated Rows'] * 100
+        # Calculate amount deviation
+        self.df['Deviation (in rows)'] = (self.df['Actual Rows'] - self.df['Estimated Rows'])
 
     def plot_deviation(self):
         # Extract the numeric part of the query name for sorting
@@ -42,13 +41,22 @@ class QueryAnalyzer:
         plt.figure(figsize=(12, 6))
 
         # Create a boxplot for each query
-        sns.boxplot(x='Query Name', y='Deviation (%)', data=self.df, showfliers=False)
+        sns.boxplot(x='Query Name', y='Deviation (in rows)', data=self.df, showfliers=False)
 
         # Set the title and labels
         plt.title('Complete List of all misestimations [Error deviation from 1%] ')
         plt.xlabel('Query Name')
         plt.xticks(rotation=45, ha='right')
-        plt.ylabel('Deviation (%)')
+        plt.ylabel('Deviation (in rows)')
+
+        # Adjust x-axis labels: Only show every second label that ends with "a"
+        x_labels = self.df['Query Name'].unique()
+        labeled_ticks = [label if (i % 2 == 0) else '' for i, label in enumerate(x_labels)]
+        plt.xticks(ticks=range(len(x_labels)), labels=labeled_ticks, rotation=45, ha='right', fontsize=10)
+
+        # Set grid with checkered background
+        plt.grid(True, linestyle='--', linewidth=0.5)
+        plt.gca().set_facecolor('whitesmoke')  # Set the background color to be a light gray for the checkered look
 
         # Show plot
         plt.tight_layout()
