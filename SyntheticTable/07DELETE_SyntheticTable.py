@@ -13,9 +13,9 @@ def delete_data_from_table():
 
     try:
         # Execute delete command
-        cursor.execute("DELETE FROM dummytable")
+        cursor.execute("DELETE FROM synthetictable")
         connection.commit()  # Commit changes to make sure data is deleted
-        print("Data deleted successfully from dummytable.")
+        print("Data deleted successfully from syntheticTable.")
     except Exception as e:
         print(f"An error occurred: {e}")
         connection.rollback()  # Rollback in case of any error

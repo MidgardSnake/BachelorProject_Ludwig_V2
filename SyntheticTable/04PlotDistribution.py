@@ -6,6 +6,9 @@ def plot_distribution(file_path):
     data = pd.read_csv(file_path, header=None)
     data.columns = ['Normal', 'Poisson', 'Exponential', 'Uniform', 'Random', 'Modulo']
 
+    # Attempt to convert all columns to numeric, invalid parsing will be set as NaN
+    data = data.apply(pd.to_numeric, errors='coerce')
+
     # Farben für die Graphen definieren
     colors = ['blue', 'green', 'red', 'orange', 'purple', 'brown']
 
@@ -14,12 +17,13 @@ def plot_distribution(file_path):
 
     # Durch jede Spalte iterieren und ein Histogramm erstellen
     for index, column in enumerate(data.columns):
-        plt.hist(data[column], bins=50, color=colors[index], alpha=0.6, label=f'{column} distribution')
+        column_data = data[column].dropna()  # Drop NaN values resulting from invalid conversions
+        plt.hist(column_data, bins=50, color=colors[index], alpha=0.6, label=f'{column} distribution')
 
         # Anomalien identifizieren (beispielhaft als Werte außerhalb von 3 Standardabweichungen)
-        mean = data[column].mean()
-        std = data[column].std()
-        anomalies = data[column][(data[column] < mean - 3 * std) | (data[column] > mean + 3 * std)]
+        mean = column_data.mean()
+        std = column_data.std()
+        anomalies = column_data[(column_data < mean - 3 * std) | (column_data > mean + 3 * std)]
 
         # Anomalien markieren
         for anomaly in anomalies:
@@ -36,6 +40,7 @@ def plot_distribution(file_path):
     # Ergebnis zeigen
     plt.show()
 
+
 # Pfad zur Datei, passe diesen an deinen Dateipfad an
-file_path = '/DummyTable/00ImportData/insert_data.txt'
+file_path = '/Users/lui/PycharmProjects/BachelorProject_Ludwig_V2/SyntheticTable/00ImportData/synthetictable.txt'
 plot_distribution(file_path)

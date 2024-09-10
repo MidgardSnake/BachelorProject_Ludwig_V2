@@ -1,0 +1,889 @@
+Query Name,Estimated Rows,Actual Rows,Relation Name,Node Type,Join Type,Scan Direction,Parent Node Type
+10a.sql :,2,35,XXX,Nested Loop,Inner,XXX,Aggregate
+10a.sql :,2,35,XXX,Nested Loop,Inner,XXX,Nested Loop
+10a.sql :,1835,29496,XXX,Hash Join,Inner,XXX,Nested Loop
+10a.sql :,756,8625,XXX,Hash,XXX,XXX,Hash Join
+10a.sql :,756,8625,XXX,Hash Join,Inner,XXX,Hash
+11a.sql :,1,310,XXX,Nested Loop,Inner,XXX,Aggregate
+11a.sql :,1,1292,XXX,Gather,XXX,XXX,Nested Loop
+11a.sql :,1,431,XXX,Nested Loop,Inner,XXX,Gather
+11a.sql :,2,764,XXX,Nested Loop,Inner,XXX,Nested Loop
+11a.sql :,9,3972,XXX,Hash Join,Inner,XXX,Nested Loop
+11a.sql :,35,4777,XXX,Hash Join,Inner,XXX,Hash Join
+11a.sql :,14,3515,XXX,Hash,XXX,XXX,Hash Join
+11a.sql :,14,3515,XXX,Hash Join,Inner,XXX,Hash
+11b.sql :,1,14,XXX,Nested Loop,Inner,XXX,Aggregate
+11b.sql :,1,21,XXX,Nested Loop,Inner,XXX,Nested Loop
+11b.sql :,9,3972,XXX,Hash Join,Inner,XXX,Nested Loop
+11b.sql :,35,4777,XXX,Hash Join,Inner,XXX,Hash Join
+11b.sql :,14,3515,XXX,Hash,XXX,XXX,Hash Join
+11b.sql :,14,3515,XXX,Hash Join,Inner,XXX,Hash
+11c.sql :,1,6946,XXX,Nested Loop,Inner,XXX,Aggregate
+11c.sql :,1,6946,XXX,Nested Loop,Inner,XXX,Nested Loop
+11c.sql :,1,4137,XXX,Nested Loop,Inner,XXX,Nested Loop
+11c.sql :,1,4726,XXX,Gather,XXX,XXX,Nested Loop
+11c.sql :,1,1575,XXX,Nested Loop,Inner,XXX,Gather
+11c.sql :,85,51595,XXX,Hash Join,Inner,XXX,Nested Loop
+11c.sql :,112,56471,XXX,Hash Join,Inner,XXX,Hash Join
+11c.sql :,42,15801,XXX,Hash,XXX,XXX,Hash Join
+11c.sql :,42,15801,XXX,Hash Join,Inner,XXX,Hash
+11d.sql :,22,4966,XXX,Nested Loop,Inner,XXX,Aggregate
+11d.sql :,24,4972,XXX,Nested Loop,Inner,XXX,Nested Loop
+11d.sql :,32,5170,XXX,Hash Join,Inner,XXX,Nested Loop
+11d.sql :,12,487,XXX,Hash,XXX,XXX,Hash Join
+11d.sql :,12,487,XXX,Hash Join,Inner,XXX,Hash
+11d.sql :,12,487,XXX,Nested Loop,Inner,XXX,Hash Join
+11d.sql :,13,487,XXX,Hash Join,Inner,XXX,Nested Loop
+11d.sql :,42,15801,XXX,Hash Join,Inner,XXX,Hash Join
+12a.sql :,1,132,XXX,Nested Loop,Inner,XXX,Aggregate
+12a.sql :,1,437,XXX,Nested Loop,Inner,XXX,Nested Loop
+12a.sql :,1,839,XXX,Nested Loop,Inner,XXX,Nested Loop
+12a.sql :,5,3620,XXX,Hash Join,Inner,XXX,Nested Loop
+12a.sql :,1,648,XXX,Hash,XXX,XXX,Hash Join
+12a.sql :,1,648,XXX,Hash Join,Inner,XXX,Hash
+12a.sql :,1015,90907,XXX,Hash Join,Inner,XXX,Hash Join
+12a.sql :,188,5283,XXX,Hash,XXX,XXX,Hash Join
+12a.sql :,188,5283,XXX,Hash Join,Inner,XXX,Hash
+12b.sql :,1,10,XXX,Nested Loop,Inner,XXX,Aggregate
+12b.sql :,1,10,XXX,Gather,XXX,XXX,Nested Loop
+12b.sql :,1,11,XXX,Hash Join,Inner,XXX,Nested Loop
+12c.sql :,1,1570,XXX,Nested Loop,Inner,XXX,Aggregate
+12c.sql :,2,4251,XXX,Nested Loop,Inner,XXX,Nested Loop
+12c.sql :,6,12740,XXX,Nested Loop,Inner,XXX,Nested Loop
+12c.sql :,23,42037,XXX,Hash Join,Inner,XXX,Nested Loop
+12c.sql :,5,7396,XXX,Hash,XXX,XXX,Hash Join
+12c.sql :,5,7396,XXX,Hash Join,Inner,XXX,Hash
+12c.sql :,1205,108418,XXX,Hash Join,Inner,XXX,Hash Join
+12c.sql :,707,40524,XXX,Hash,XXX,XXX,Hash Join
+12c.sql :,707,40524,XXX,Hash Join,Inner,XXX,Hash
+13a.sql :,11,37034,XXX,Nested Loop,Inner,XXX,Aggregate
+13a.sql :,269,639832,XXX,Hash Join,Inner,XXX,Nested Loop
+13a.sql :,968,2707862,XXX,Hash Join,Inner,XXX,Hash Join
+13a.sql :,208,241577,XXX,Hash,XXX,XXX,Hash Join
+13a.sql :,208,241577,XXX,Hash Join,Inner,XXX,Hash
+13a.sql :,1458,372995,XXX,Nested Loop,Inner,XXX,Hash Join
+13a.sql :,1458,372995,XXX,Hash Join,Inner,XXX,Nested Loop
+13a.sql :,54446,1012240,XXX,Hash Join,Inner,XXX,Hash Join
+13a.sql :,5089,153308,XXX,Hash,XXX,XXX,Hash Join
+13a.sql :,5089,153308,XXX,Hash Join,Inner,XXX,Hash
+13b.sql :,1,372,XXX,Nested Loop,Inner,XXX,Aggregate
+13b.sql :,1,978,XXX,Nested Loop,Inner,XXX,Nested Loop
+13b.sql :,1,2474,XXX,Gather,XXX,XXX,Nested Loop
+13b.sql :,1,825,XXX,Nested Loop,Inner,XXX,Gather
+13b.sql :,1,1067,XXX,Hash Join,Inner,XXX,Nested Loop
+13b.sql :,1,194,XXX,Hash,XXX,XXX,Hash Join
+13b.sql :,1,194,XXX,Nested Loop,Inner,XXX,Hash
+13b.sql :,1458,372995,XXX,Hash Join,Inner,XXX,Nested Loop
+13b.sql :,54446,1012240,XXX,Hash Join,Inner,XXX,Hash Join
+13b.sql :,5089,153308,XXX,Hash,XXX,XXX,Hash Join
+13b.sql :,5089,153308,XXX,Hash Join,Inner,XXX,Hash
+13c.sql :,1,53,XXX,Nested Loop,Inner,XXX,Aggregate
+13c.sql :,1,213,XXX,Nested Loop,Inner,XXX,Nested Loop
+13c.sql :,1,615,XXX,Gather,XXX,XXX,Nested Loop
+13c.sql :,1,205,XXX,Nested Loop,Inner,XXX,Gather
+13c.sql :,1,232,XXX,Hash Join,Inner,XXX,Nested Loop
+13c.sql :,1,43,XXX,Hash,XXX,XXX,Hash Join
+13c.sql :,1,43,XXX,Nested Loop,Inner,XXX,Hash
+13c.sql :,1458,372995,XXX,Hash Join,Inner,XXX,Nested Loop
+13c.sql :,54446,1012240,XXX,Hash Join,Inner,XXX,Hash Join
+13c.sql :,5089,153308,XXX,Hash,XXX,XXX,Hash Join
+13c.sql :,5089,153308,XXX,Hash Join,Inner,XXX,Hash
+13d.sql :,97,223463,XXX,Nested Loop,Inner,XXX,Aggregate
+13d.sql :,269,639832,XXX,Hash Join,Inner,XXX,Nested Loop
+13d.sql :,968,2707862,XXX,Hash Join,Inner,XXX,Hash Join
+13d.sql :,208,241577,XXX,Hash,XXX,XXX,Hash Join
+13d.sql :,208,241577,XXX,Hash Join,Inner,XXX,Hash
+13d.sql :,1458,372995,XXX,Nested Loop,Inner,XXX,Hash Join
+13d.sql :,1458,372995,XXX,Hash Join,Inner,XXX,Nested Loop
+13d.sql :,54446,1012240,XXX,Hash Join,Inner,XXX,Hash Join
+13d.sql :,5089,153308,XXX,Hash,XXX,XXX,Hash Join
+13d.sql :,5089,153308,XXX,Hash Join,Inner,XXX,Hash
+14a.sql :,1,761,XXX,Gather,XXX,XXX,Aggregate
+14a.sql :,1,254,XXX,Nested Loop,Inner,XXX,Gather
+14a.sql :,18,25223,XXX,Hash Join,Inner,XXX,Nested Loop
+14a.sql :,1,2915,XXX,Hash,XXX,XXX,Hash Join
+14a.sql :,1,2915,XXX,Hash Join,Inner,XXX,Hash
+14a.sql :,10,5838,XXX,Nested Loop,Inner,XXX,Hash Join
+14a.sql :,64,71080,XXX,Hash Join,Inner,XXX,Nested Loop
+14a.sql :,2471,204750,XXX,Hash Join,Inner,XXX,Hash Join
+14a.sql :,4943,151410,XXX,Hash,XXX,XXX,Hash Join
+14a.sql :,4943,151410,XXX,Hash Join,Inner,XXX,Hash
+14b.sql :,1,65,XXX,Hash Join,Inner,XXX,Nested Loop
+14b.sql :,18,38863,XXX,Hash Join,Inner,XXX,Nested Loop
+14b.sql :,2471,204750,XXX,Hash Join,Inner,XXX,Hash Join
+14b.sql :,1366,86616,XXX,Hash,XXX,XXX,Hash Join
+14b.sql :,1366,86616,XXX,Hash Join,Inner,XXX,Hash
+14c.sql :,1,1372,XXX,Nested Loop,Inner,XXX,Aggregate
+14c.sql :,96,153383,XXX,Hash Join,Inner,XXX,Nested Loop
+14c.sql :,8,14805,XXX,Hash,XXX,XXX,Hash Join
+14c.sql :,8,14805,XXX,Hash Join,Inner,XXX,Hash
+14c.sql :,26,21417,XXX,Nested Loop,Inner,XXX,Hash Join
+14c.sql :,65,71080,XXX,Hash Join,Inner,XXX,Nested Loop
+14c.sql :,2517,204750,XXX,Hash Join,Inner,XXX,Hash Join
+14c.sql :,4943,151410,XXX,Hash,XXX,XXX,Hash Join
+14c.sql :,4943,151410,XXX,Hash Join,Inner,XXX,Hash
+15a.sql :,8,109,XXX,Hash Join,Inner,XXX,Aggregate
+15a.sql :,3,466,XXX,Hash,XXX,XXX,Hash Join
+15a.sql :,3,466,XXX,Nested Loop,Inner,XXX,Hash
+15a.sql :,3,466,XXX,Nested Loop,Inner,XXX,Nested Loop
+15a.sql :,5,491,XXX,Hash Join,Inner,XXX,Nested Loop
+15a.sql :,1,223,XXX,Hash,XXX,XXX,Hash Join
+15a.sql :,1,223,XXX,Nested Loop,Inner,XXX,Hash
+15a.sql :,1,223,XXX,Nested Loop,Inner,XXX,Nested Loop
+15a.sql :,1,233,XXX,Hash Join,Inner,XXX,Nested Loop
+15a.sql :,1,590,XXX,Hash,XXX,XXX,Hash Join
+15a.sql :,1,590,XXX,Hash Join,Inner,XXX,Hash
+15b.sql :,1,25,XXX,Hash Join,Inner,XXX,Nested Loop
+15b.sql :,1,39,XXX,Hash,XXX,XXX,Hash Join
+15b.sql :,1,39,XXX,Hash Join,Inner,XXX,Hash
+15b.sql :,1,590,XXX,Hash,XXX,XXX,Hash Join
+15b.sql :,1,590,XXX,Hash Join,Inner,XXX,Hash
+15c.sql :,57,757,XXX,Hash Join,Inner,XXX,Aggregate
+15c.sql :,22,2655,XXX,Hash,XXX,XXX,Hash Join
+15c.sql :,22,2655,XXX,Nested Loop,Inner,XXX,Hash
+15c.sql :,22,2655,XXX,Hash Join,Inner,XXX,Nested Loop
+15c.sql :,2,882,XXX,Hash,XXX,XXX,Hash Join
+15c.sql :,2,882,XXX,Nested Loop,Inner,XXX,Hash
+15c.sql :,2,882,XXX,Nested Loop,Inner,XXX,Nested Loop
+15c.sql :,2,882,XXX,Nested Loop,Inner,XXX,Nested Loop
+15c.sql :,6,961,XXX,Hash Join,Inner,XXX,Nested Loop
+15c.sql :,1,594,XXX,Hash,XXX,XXX,Hash Join
+15c.sql :,1,594,XXX,Hash Join,Inner,XXX,Hash
+15d.sql :,815,8521,XXX,Hash,XXX,XXX,Hash Join
+15d.sql :,815,8521,XXX,Nested Loop,Inner,XXX,Hash
+15d.sql :,815,8521,XXX,Hash Join,Inner,XXX,Nested Loop
+15d.sql :,63,3286,XXX,Hash,XXX,XXX,Hash Join
+15d.sql :,63,3286,XXX,Hash Join,Inner,XXX,Hash
+15d.sql :,63,3286,XXX,Nested Loop,Inner,XXX,Hash Join
+15d.sql :,175,4792,XXX,Hash Join,Inner,XXX,Nested Loop
+15d.sql :,34,3554,XXX,Hash,XXX,XXX,Hash Join
+15d.sql :,34,3554,XXX,Nested Loop,Inner,XXX,Hash
+15d.sql :,49,3560,XXX,Hash Join,Inner,XXX,Nested Loop
+16a.sql :,10,108,XXX,Hash,XXX,XXX,Hash Join
+16a.sql :,10,108,XXX,Nested Loop,Inner,XXX,Hash
+16a.sql :,10,108,XXX,Hash Join,Inner,XXX,Nested Loop
+16a.sql :,1,49,XXX,Hash,XXX,XXX,Hash Join
+16a.sql :,1,49,XXX,Nested Loop,Inner,XXX,Hash
+16a.sql :,14,13947,XXX,Hash Join,Inner,XXX,Nested Loop
+16b.sql :,1008,1236864,XXX,Hash Join,Inner,XXX,Aggregate
+16b.sql :,416,944185,XXX,Hash,XXX,XXX,Hash Join
+16b.sql :,416,944185,XXX,Nested Loop,Inner,XXX,Hash
+16b.sql :,416,944185,XXX,Hash Join,Inner,XXX,Nested Loop
+16b.sql :,26,22772,XXX,Hash,XXX,XXX,Hash Join
+16b.sql :,26,22772,XXX,Nested Loop,Inner,XXX,Hash
+16b.sql :,73,49517,XXX,Hash Join,Inner,XXX,Nested Loop
+16b.sql :,14,13947,XXX,Hash,XXX,XXX,Hash Join
+16b.sql :,14,13947,XXX,Nested Loop,Inner,XXX,Hash
+16b.sql :,14,13947,XXX,Hash Join,Inner,XXX,Nested Loop
+16c.sql :,377,106644,XXX,Hash Join,Inner,XXX,Aggregate
+16c.sql :,155,73870,XXX,Hash,XXX,XXX,Hash Join
+16c.sql :,155,73870,XXX,Nested Loop,Inner,XXX,Hash
+16c.sql :,155,73870,XXX,Hash Join,Inner,XXX,Nested Loop
+16c.sql :,10,2846,XXX,Hash,XXX,XXX,Hash Join
+16c.sql :,10,2846,XXX,Nested Loop,Inner,XXX,Hash
+16c.sql :,27,3802,XXX,Hash Join,Inner,XXX,Nested Loop
+16c.sql :,5,2309,XXX,Hash,XXX,XXX,Hash Join
+16c.sql :,5,2309,XXX,Nested Loop,Inner,XXX,Hash
+16c.sql :,14,13947,XXX,Hash Join,Inner,XXX,Nested Loop
+16d.sql :,274,83152,XXX,Hash Join,Inner,XXX,Aggregate
+16d.sql :,113,56424,XXX,Hash,XXX,XXX,Hash Join
+16d.sql :,113,56424,XXX,Nested Loop,Inner,XXX,Hash
+16d.sql :,113,56424,XXX,Hash Join,Inner,XXX,Nested Loop
+16d.sql :,7,2255,XXX,Hash,XXX,XXX,Hash Join
+16d.sql :,7,2255,XXX,Nested Loop,Inner,XXX,Hash
+16d.sql :,20,2887,XXX,Hash Join,Inner,XXX,Nested Loop
+16d.sql :,4,1795,XXX,Hash,XXX,XXX,Hash Join
+16d.sql :,4,1795,XXX,Nested Loop,Inner,XXX,Hash
+16d.sql :,14,13947,XXX,Hash Join,Inner,XXX,Nested Loop
+17a.sql :,34,86096,XXX,Nested Loop,Inner,XXX,Aggregate
+17a.sql :,416,944185,XXX,Hash Join,Inner,XXX,Nested Loop
+17a.sql :,26,22772,XXX,Hash,XXX,XXX,Hash Join
+17a.sql :,26,22772,XXX,Nested Loop,Inner,XXX,Hash
+17a.sql :,73,49517,XXX,Hash Join,Inner,XXX,Nested Loop
+17a.sql :,14,13947,XXX,Hash,XXX,XXX,Hash Join
+17a.sql :,14,13947,XXX,Nested Loop,Inner,XXX,Hash
+17a.sql :,14,13947,XXX,Hash Join,Inner,XXX,Nested Loop
+17b.sql :,12,17435,XXX,Nested Loop,Inner,XXX,Aggregate
+17b.sql :,12,17435,XXX,Hash Join,Inner,XXX,Nested Loop
+17b.sql :,5,2214,XXX,Hash,XXX,XXX,Hash Join
+17b.sql :,5,2214,XXX,Nested Loop,Inner,XXX,Hash
+17b.sql :,5,2214,XXX,Nested Loop,Inner,XXX,Nested Loop
+17b.sql :,474,346131,XXX,Hash Join,Inner,XXX,Nested Loop
+17b.sql :,14,13947,XXX,Hash,XXX,XXX,Hash Join
+17b.sql :,14,13947,XXX,Hash Join,Inner,XXX,Hash
+17c.sql :,1,639,XXX,Nested Loop,Inner,XXX,Aggregate
+17c.sql :,1,639,XXX,Nested Loop,Inner,XXX,Nested Loop
+17c.sql :,1,639,XXX,Hash Join,Inner,XXX,Nested Loop
+17c.sql :,1,83,XXX,Hash,XXX,XXX,Hash Join
+17c.sql :,1,83,XXX,Nested Loop,Inner,XXX,Hash
+17c.sql :,474,346131,XXX,Hash Join,Inner,XXX,Nested Loop
+17c.sql :,14,13947,XXX,Hash,XXX,XXX,Hash Join
+17c.sql :,14,13947,XXX,Hash Join,Inner,XXX,Hash
+17d.sql :,1,3846,XXX,Nested Loop,Inner,XXX,Aggregate
+17d.sql :,1,3846,XXX,Nested Loop,Inner,XXX,Nested Loop
+17d.sql :,1,3846,XXX,Hash Join,Inner,XXX,Nested Loop
+17d.sql :,1,657,XXX,Hash,XXX,XXX,Hash Join
+17d.sql :,1,657,XXX,Nested Loop,Inner,XXX,Hash
+17d.sql :,474,346131,XXX,Hash Join,Inner,XXX,Nested Loop
+17d.sql :,14,13947,XXX,Hash,XXX,XXX,Hash Join
+17d.sql :,14,13947,XXX,Hash Join,Inner,XXX,Hash
+17e.sql :,416,944185,XXX,Nested Loop,Inner,XXX,Aggregate
+17e.sql :,416,944185,XXX,Hash Join,Inner,XXX,Nested Loop
+17e.sql :,26,22772,XXX,Hash,XXX,XXX,Hash Join
+17e.sql :,26,22772,XXX,Nested Loop,Inner,XXX,Hash
+17e.sql :,73,49517,XXX,Hash Join,Inner,XXX,Nested Loop
+17e.sql :,14,13947,XXX,Hash,XXX,XXX,Hash Join
+17e.sql :,14,13947,XXX,Nested Loop,Inner,XXX,Hash
+17e.sql :,14,13947,XXX,Hash Join,Inner,XXX,Nested Loop
+17f.sql :,140,371040,XXX,Nested Loop,Inner,XXX,Aggregate
+17f.sql :,140,371040,XXX,Hash Join,Inner,XXX,Nested Loop
+17f.sql :,58,49831,XXX,Hash,XXX,XXX,Hash Join
+17f.sql :,58,49831,XXX,Nested Loop,Inner,XXX,Hash
+17f.sql :,474,346131,XXX,Hash Join,Inner,XXX,Nested Loop
+17f.sql :,14,13947,XXX,Hash,XXX,XXX,Hash Join
+17f.sql :,14,13947,XXX,Nested Loop,Inner,XXX,Hash
+17f.sql :,14,13947,XXX,Hash Join,Inner,XXX,Nested Loop
+18a.sql :,1,410,XXX,Nested Loop,Inner,XXX,Aggregate
+18a.sql :,1,410,XXX,Gather,XXX,XXX,Nested Loop
+18a.sql :,1,137,XXX,Nested Loop,Inner,XXX,Gather
+18a.sql :,3241,35780,XXX,Hash Join,Inner,XXX,Nested Loop
+18a.sql :,1458,15144,XXX,Hash,XXX,XXX,Hash Join
+18a.sql :,1458,15144,XXX,Hash Join,Inner,XXX,Hash
+18a.sql :,5089,153308,XXX,Hash,XXX,XXX,Hash Join
+18a.sql :,5089,153308,XXX,Hash Join,Inner,XXX,Hash
+18b.sql :,1,137,XXX,Hash Join,Inner,XXX,Nested Loop
+18b.sql :,1,244,XXX,Hash,XXX,XXX,Hash Join
+18b.sql :,1,244,XXX,Hash Join,Inner,XXX,Hash
+18b.sql :,228,24086,XXX,Hash Join,Inner,XXX,Hash Join
+18b.sql :,188,5283,XXX,Hash,XXX,XXX,Hash Join
+18b.sql :,188,5283,XXX,Hash Join,Inner,XXX,Hash
+18c.sql :,9,9358,XXX,Nested Loop,Inner,XXX,Aggregate
+18c.sql :,9,9358,XXX,Nested Loop,Inner,XXX,Nested Loop
+18c.sql :,21,18052,XXX,Hash Join,Inner,XXX,Nested Loop
+18c.sql :,18,34172,XXX,Hash,XXX,XXX,Hash Join
+18c.sql :,18,34172,XXX,Hash Join,Inner,XXX,Hash
+18c.sql :,648,62198,XXX,Hash Join,Inner,XXX,Hash Join
+18c.sql :,5089,153308,XXX,Hash,XXX,XXX,Hash Join
+18c.sql :,5089,153308,XXX,Hash Join,Inner,XXX,Hash
+19a.sql :,1,184,XXX,Nested Loop,Inner,XXX,Aggregate
+19a.sql :,1,311,XXX,Nested Loop,Inner,XXX,Nested Loop
+19a.sql :,1,321,XXX,Nested Loop,Inner,XXX,Nested Loop
+19a.sql :,1,338,XXX,Gather,XXX,XXX,Nested Loop
+19a.sql :,1,113,XXX,Hash Join,Inner,XXX,Gather
+19a.sql :,1,98,XXX,Hash,XXX,XXX,Hash Join
+19a.sql :,1,98,XXX,Nested Loop,Inner,XXX,Hash
+19a.sql :,74,24232,XXX,Hash Join,Inner,XXX,Nested Loop
+19a.sql :,114,49045,XXX,Hash,XXX,XXX,Hash Join
+19a.sql :,114,49045,XXX,Hash Join,Inner,XXX,Hash
+19a.sql :,1725,150346,XXX,Hash Join,Inner,XXX,Hash Join
+19b.sql :,1,92,XXX,Nested Loop,Inner,XXX,Nested Loop
+19b.sql :,1,92,XXX,Hash Join,Inner,XXX,Nested Loop
+19b.sql :,1,54,XXX,Hash,XXX,XXX,Hash Join
+19b.sql :,1,54,XXX,Nested Loop,Inner,XXX,Hash
+19b.sql :,1,57,XXX,Hash Join,Inner,XXX,Nested Loop
+19b.sql :,1,23,XXX,Hash,XXX,XXX,Hash Join
+19b.sql :,1,23,XXX,Hash Join,Inner,XXX,Hash
+19b.sql :,6,23159,XXX,Hash Join,Inner,XXX,Nested Loop
+19b.sql :,642,23159,movie_info,Seq Scan,XXX,XXX,Hash Join
+19c.sql :,2,1192,XXX,Hash Join,Inner,XXX,Aggregate
+19c.sql :,1,877,XXX,Hash,XXX,XXX,Hash Join
+19c.sql :,1,877,XXX,Nested Loop,Inner,XXX,Hash
+19c.sql :,2,2862,XXX,Hash Join,Inner,XXX,Nested Loop
+19c.sql :,1,710,XXX,Hash,XXX,XXX,Hash Join
+19c.sql :,1,710,XXX,Nested Loop,Inner,XXX,Hash
+19c.sql :,1,755,XXX,Nested Loop,Inner,XXX,Nested Loop
+19c.sql :,2,840,XXX,Nested Loop,Inner,XXX,Nested Loop
+19c.sql :,114,49045,XXX,Hash Join,Inner,XXX,Nested Loop
+19c.sql :,1725,150346,XXX,Hash Join,Inner,XXX,Hash Join
+19d.sql :,1002,586882,XXX,Hash Join,Inner,XXX,Aggregate
+19d.sql :,414,262348,XXX,Hash,XXX,XXX,Hash Join
+19d.sql :,414,262348,XXX,Nested Loop,Inner,XXX,Hash
+19d.sql :,1146,1076352,XXX,Hash Join,Inner,XXX,Nested Loop
+19d.sql :,222,113945,XXX,Hash,XXX,XXX,Hash Join
+19d.sql :,222,113945,XXX,Nested Loop,Inner,XXX,Hash
+19d.sql :,457,123848,XXX,Nested Loop,Inner,XXX,Nested Loop
+19d.sql :,841,182242,XXX,Nested Loop,Inner,XXX,Nested Loop
+19d.sql :,3600,182372,XXX,Hash Join,Inner,XXX,Nested Loop
+19d.sql :,54446,1012240,XXX,Hash Join,Inner,XXX,Hash Join
+20a.sql :,1,11,XXX,Nested Loop,Inner,XXX,Aggregate
+20a.sql :,1,11,XXX,Nested Loop,Inner,XXX,Nested Loop
+20a.sql :,4,177603,XXX,Hash Join,Inner,XXX,Nested Loop
+20a.sql :,490,328367,XXX,Hash Join,Inner,XXX,Hash Join
+20a.sql :,15,5331,XXX,Hash,XXX,XXX,Hash Join
+20a.sql :,15,5331,XXX,Hash Join,Inner,XXX,Hash
+20a.sql :,102,10536,XXX,Nested Loop,Inner,XXX,Hash Join
+20a.sql :,112,11849,XXX,Hash Join,Inner,XXX,Nested Loop
+20a.sql :,8443,85941,XXX,Hash,XXX,XXX,Hash Join
+20a.sql :,8443,85941,XXX,Hash Join,Inner,XXX,Hash
+20b.sql :,2,74173,XXX,Hash Join,Inner,XXX,Nested Loop
+20b.sql :,295,163401,XXX,Hash Join,Inner,XXX,Hash Join
+20b.sql :,9,2014,XXX,Hash,XXX,XXX,Hash Join
+20b.sql :,9,2014,XXX,Hash Join,Inner,XXX,Hash
+20b.sql :,61,4722,XXX,Nested Loop,Inner,XXX,Hash Join
+20b.sql :,112,11849,XXX,Hash Join,Inner,XXX,Nested Loop
+20b.sql :,8443,85941,XXX,Hash,XXX,XXX,Hash Join
+20b.sql :,8443,85941,XXX,Hash Join,Inner,XXX,Hash
+20c.sql :,1,1802,XXX,Nested Loop,Inner,XXX,Aggregate
+20c.sql :,1,1802,XXX,Nested Loop,Inner,XXX,Nested Loop
+20c.sql :,3,63281,XXX,Hash Join,Inner,XXX,Nested Loop
+20c.sql :,368,135419,XXX,Hash Join,Inner,XXX,Hash Join
+20c.sql :,11,1677,XXX,Hash,XXX,XXX,Hash Join
+20c.sql :,11,1677,XXX,Hash Join,Inner,XXX,Hash
+20c.sql :,76,3538,XXX,Nested Loop,Inner,XXX,Hash Join
+20c.sql :,140,8030,XXX,Hash Join,Inner,XXX,Nested Loop
+20c.sql :,8443,85941,XXX,Hash,XXX,XXX,Hash Join
+20c.sql :,8443,85941,XXX,Hash Join,Inner,XXX,Hash
+21a.sql :,1,1410,XXX,Nested Loop,Inner,XXX,Aggregate
+21a.sql :,1,696,XXX,Nested Loop,Inner,XXX,Nested Loop
+21a.sql :,1,952,XXX,Gather,XXX,XXX,Nested Loop
+21a.sql :,1,317,XXX,Nested Loop,Inner,XXX,Gather
+21a.sql :,2,885,XXX,Nested Loop,Inner,XXX,Nested Loop
+21a.sql :,15,1005,XXX,Hash Join,Inner,XXX,Nested Loop
+21a.sql :,6,507,XXX,Hash,XXX,XXX,Hash Join
+21a.sql :,6,507,XXX,Hash Join,Inner,XXX,Hash
+21a.sql :,14,3515,XXX,Hash,XXX,XXX,Hash Join
+21a.sql :,14,3515,XXX,Hash Join,Inner,XXX,Hash
+21b.sql :,1,38,XXX,Nested Loop,Inner,XXX,Aggregate
+21b.sql :,1,144,XXX,Nested Loop,Inner,XXX,Nested Loop
+21b.sql :,1,488,XXX,Gather,XXX,XXX,Nested Loop
+21b.sql :,1,163,XXX,Nested Loop,Inner,XXX,Gather
+21b.sql :,2,491,XXX,Nested Loop,Inner,XXX,Nested Loop
+21b.sql :,13,557,XXX,Hash Join,Inner,XXX,Nested Loop
+21b.sql :,5,301,XXX,Hash,XXX,XXX,Hash Join
+21b.sql :,5,301,XXX,Hash Join,Inner,XXX,Hash
+21b.sql :,14,3515,XXX,Hash,XXX,XXX,Hash Join
+21b.sql :,14,3515,XXX,Hash Join,Inner,XXX,Hash
+21c.sql :,1,1874,XXX,Gather,XXX,XXX,Aggregate
+21c.sql :,1,625,XXX,Hash Join,Inner,XXX,Gather
+21c.sql :,2,649,XXX,Hash Join,Inner,XXX,Hash Join
+21c.sql :,1,601,XXX,Hash,XXX,XXX,Hash Join
+21c.sql :,1,601,XXX,Nested Loop,Inner,XXX,Hash
+21c.sql :,2,764,XXX,Nested Loop,Inner,XXX,Nested Loop
+21c.sql :,9,3972,XXX,Hash Join,Inner,XXX,Nested Loop
+21c.sql :,35,4777,XXX,Hash Join,Inner,XXX,Hash Join
+21c.sql :,14,3515,XXX,Hash,XXX,XXX,Hash Join
+21c.sql :,14,3515,XXX,Hash Join,Inner,XXX,Hash
+22a.sql :,1,2851,XXX,Gather,XXX,XXX,Aggregate
+22a.sql :,1,950,XXX,Nested Loop,Inner,XXX,Gather
+22a.sql :,8,106470,XXX,Hash Join,Inner,XXX,Nested Loop
+22a.sql :,1,1224,XXX,Hash,XXX,XXX,Hash Join
+22a.sql :,1,1224,XXX,Nested Loop,Inner,XXX,Hash
+22a.sql :,1,1224,XXX,Nested Loop,Inner,XXX,Nested Loop
+22a.sql :,1,1478,XXX,Nested Loop,Inner,XXX,Nested Loop
+22a.sql :,4,1907,XXX,Nested Loop,Inner,XXX,Nested Loop
+22a.sql :,15,26221,XXX,Hash Join,Inner,XXX,Nested Loop
+22a.sql :,55,49082,XXX,Hash,XXX,XXX,Hash Join
+22a.sql :,55,49082,XXX,Hash Join,Inner,XXX,Hash
+22a.sql :,2400,196255,XXX,Hash Join,Inner,XXX,Hash Join
+22a.sql :,4332,108039,XXX,Hash,XXX,XXX,Hash Join
+22a.sql :,4332,108039,XXX,Hash Join,Inner,XXX,Hash
+22b.sql :,1,31,XXX,Gather,XXX,XXX,Aggregate
+22b.sql :,1,10,XXX,Nested Loop,Inner,XXX,Gather
+22b.sql :,6,869,XXX,Hash Join,Inner,XXX,Nested Loop
+22b.sql :,1,30,XXX,Hash,XXX,XXX,Hash Join
+22b.sql :,1,30,XXX,Nested Loop,Inner,XXX,Hash
+22b.sql :,1,30,XXX,Nested Loop,Inner,XXX,Nested Loop
+22b.sql :,1,58,XXX,Nested Loop,Inner,XXX,Nested Loop
+22b.sql :,3,79,XXX,Nested Loop,Inner,XXX,Nested Loop
+22b.sql :,15,26221,XXX,Hash Join,Inner,XXX,Nested Loop
+22b.sql :,55,49082,XXX,Hash,XXX,XXX,Hash Join
+22b.sql :,55,49082,XXX,Hash Join,Inner,XXX,Hash
+22b.sql :,2400,196255,XXX,Hash Join,Inner,XXX,Hash Join
+22b.sql :,4332,108039,XXX,Hash,XXX,XXX,Hash Join
+22b.sql :,4332,108039,XXX,Hash Join,Inner,XXX,Hash
+22c.sql :,1,21489,XXX,Gather,XXX,XXX,Aggregate
+22c.sql :,1,7163,XXX,Nested Loop,Inner,XXX,Gather
+22c.sql :,13,870324,XXX,Hash Join,Inner,XXX,Nested Loop
+22c.sql :,1,11977,XXX,Hash,XXX,XXX,Hash Join
+22c.sql :,1,11977,XXX,Nested Loop,Inner,XXX,Hash
+22c.sql :,1,11977,XXX,Nested Loop,Inner,XXX,Nested Loop
+22c.sql :,2,13444,XXX,Nested Loop,Inner,XXX,Nested Loop
+22c.sql :,7,16731,XXX,Nested Loop,Inner,XXX,Nested Loop
+22c.sql :,17,42758,XXX,Hash Join,Inner,XXX,Nested Loop
+22c.sql :,65,71080,XXX,Hash,XXX,XXX,Hash Join
+22c.sql :,65,71080,XXX,Hash Join,Inner,XXX,Hash
+22c.sql :,2517,204750,XXX,Hash Join,Inner,XXX,Hash Join
+22c.sql :,4943,151410,XXX,Hash,XXX,XXX,Hash Join
+22c.sql :,4943,151410,XXX,Hash Join,Inner,XXX,Hash
+22d.sql :,1,15427,XXX,Nested Loop,Inner,XXX,Aggregate
+22d.sql :,1,15427,XXX,Nested Loop,Inner,XXX,Nested Loop
+22d.sql :,1,21616,XXX,Hash Join,Inner,XXX,Nested Loop
+22d.sql :,1,1372,XXX,Hash,XXX,XXX,Hash Join
+22d.sql :,1,1372,XXX,Nested Loop,Inner,XXX,Hash
+22d.sql :,96,153383,XXX,Hash Join,Inner,XXX,Nested Loop
+22d.sql :,8,14805,XXX,Hash,XXX,XXX,Hash Join
+22d.sql :,8,14805,XXX,Hash Join,Inner,XXX,Hash
+22d.sql :,26,21417,XXX,Nested Loop,Inner,XXX,Hash Join
+22d.sql :,65,71080,XXX,Hash Join,Inner,XXX,Nested Loop
+22d.sql :,2517,204750,XXX,Hash Join,Inner,XXX,Hash Join
+22d.sql :,4943,151410,XXX,Hash,XXX,XXX,Hash Join
+22d.sql :,4943,151410,XXX,Hash Join,Inner,XXX,Hash
+23a.sql :,1,206,XXX,Nested Loop,Inner,XXX,Aggregate
+23a.sql :,1,206,XXX,Nested Loop,Inner,XXX,Nested Loop
+23a.sql :,1,206,XXX,Hash Join,Inner,XXX,Nested Loop
+23a.sql :,2,1269,XXX,Hash Join,Inner,XXX,Hash Join
+23a.sql :,1,352,XXX,Hash,XXX,XXX,Hash Join
+23a.sql :,1,352,XXX,Nested Loop,Inner,XXX,Hash
+23a.sql :,1,865,XXX,Nested Loop,Inner,XXX,Nested Loop
+23a.sql :,2,882,XXX,Nested Loop,Inner,XXX,Nested Loop
+23a.sql :,6,961,XXX,Hash Join,Inner,XXX,Nested Loop
+23a.sql :,1,594,XXX,Hash,XXX,XXX,Hash Join
+23a.sql :,1,594,XXX,Hash Join,Inner,XXX,Hash
+23b.sql :,1,16,XXX,Gather,XXX,XXX,Aggregate
+23b.sql :,1,206,XXX,Nested Loop,Inner,XXX,Nested Loop
+23b.sql :,1,206,XXX,Hash Join,Inner,XXX,Nested Loop
+23b.sql :,2,1269,XXX,Hash Join,Inner,XXX,Hash Join
+23b.sql :,1,352,XXX,Hash,XXX,XXX,Hash Join
+23b.sql :,1,352,XXX,Nested Loop,Inner,XXX,Hash
+23b.sql :,1,865,XXX,Nested Loop,Inner,XXX,Nested Loop
+23b.sql :,2,878,XXX,Nested Loop,Inner,XXX,Nested Loop
+23b.sql :,6,956,XXX,Hash Join,Inner,XXX,Nested Loop
+23b.sql :,1,590,XXX,Hash,XXX,XXX,Hash Join
+23b.sql :,1,590,XXX,Hash Join,Inner,XXX,Hash
+23c.sql :,2,209,XXX,Nested Loop,Inner,XXX,Aggregate
+23c.sql :,2,209,XXX,Hash Join,Inner,XXX,Nested Loop
+23c.sql :,12,2053,XXX,Hash Join,Inner,XXX,Hash Join
+23c.sql :,1,578,XXX,Hash,XXX,XXX,Hash Join
+23c.sql :,1,578,XXX,Nested Loop,Inner,XXX,Hash
+23c.sql :,1,578,XXX,Nested Loop,Inner,XXX,Nested Loop
+23c.sql :,2,882,XXX,Nested Loop,Inner,XXX,Nested Loop
+23c.sql :,2,882,XXX,Nested Loop,Inner,XXX,Nested Loop
+23c.sql :,6,961,XXX,Hash Join,Inner,XXX,Nested Loop
+23c.sql :,1,594,XXX,Hash,XXX,XXX,Hash Join
+23c.sql :,1,594,XXX,Hash Join,Inner,XXX,Hash
+24a.sql :,1,275,XXX,Nested Loop,Inner,XXX,Aggregate
+24a.sql :,1,275,XXX,Nested Loop,Inner,XXX,Nested Loop
+24a.sql :,1,892,XXX,Gather,XXX,XXX,Nested Loop
+24a.sql :,1,297,XXX,Hash Join,Inner,XXX,Gather
+24a.sql :,1,22,XXX,Hash,XXX,XXX,Hash Join
+24a.sql :,1,22,XXX,Nested Loop,Inner,XXX,Hash
+24a.sql :,1,4230,XXX,Nested Loop,Inner,XXX,Nested Loop
+24a.sql :,1,7892,XXX,Nested Loop,Inner,XXX,Nested Loop
+24a.sql :,1,8002,XXX,Hash Join,Inner,XXX,Nested Loop
+24a.sql :,1,3574,XXX,Hash,XXX,XXX,Hash Join
+24a.sql :,1,3574,XXX,Hash Join,Inner,XXX,Hash
+24a.sql :,1,585,XXX,Hash,XXX,XXX,Hash Join
+24a.sql :,1,585,XXX,Hash Join,Inner,XXX,Hash
+24a.sql :,19,585,XXX,Hash Join,Inner,XXX,Hash Join
+24a.sql :,42,3232,XXX,Hash,XXX,XXX,Hash Join
+24a.sql :,42,3232,XXX,Hash Join,Inner,XXX,Hash
+24b.sql :,1,45,XXX,Nested Loop,Inner,XXX,Aggregate
+24b.sql :,1,775,XXX,Gather,XXX,XXX,Nested Loop
+24b.sql :,1,258,XXX,Hash Join,Inner,XXX,Gather
+24b.sql :,1,15,XXX,Hash,XXX,XXX,Hash Join
+24b.sql :,1,15,XXX,Nested Loop,Inner,XXX,Hash
+24b.sql :,1,58,XXX,Nested Loop,Inner,XXX,Nested Loop
+24b.sql :,5,6590,XXX,Hash Join,Inner,XXX,Nested Loop
+24b.sql :,1,484,XXX,Hash,XXX,XXX,Hash Join
+24b.sql :,1,484,XXX,Nested Loop,Inner,XXX,Hash
+24b.sql :,1,491,XXX,Hash Join,Inner,XXX,Nested Loop
+24b.sql :,1,339,XXX,Hash,XXX,XXX,Hash Join
+24b.sql :,1,339,XXX,Nested Loop,Inner,XXX,Hash
+24b.sql :,38,13024,XXX,Hash Join,Inner,XXX,Nested Loop
+25a.sql :,1,1469,XXX,Nested Loop,Inner,XXX,Aggregate
+25a.sql :,1,1469,XXX,Nested Loop,Inner,XXX,Nested Loop
+25a.sql :,18,42863,XXX,Hash Join,Inner,XXX,Nested Loop
+25a.sql :,1,1617,XXX,Hash,XXX,XXX,Hash Join
+25a.sql :,1,1617,XXX,Nested Loop,Inner,XXX,Hash
+25a.sql :,3,2883,XXX,Hash Join,Inner,XXX,Nested Loop
+25a.sql :,3,5493,XXX,Hash,XXX,XXX,Hash Join
+25a.sql :,3,5493,XXX,Hash Join,Inner,XXX,Hash
+25a.sql :,103,10138,XXX,Hash Join,Inner,XXX,Hash Join
+25a.sql :,5089,153308,XXX,Hash,XXX,XXX,Hash Join
+25a.sql :,5089,153308,XXX,Hash Join,Inner,XXX,Hash
+25b.sql :,1,12,XXX,Hash Join,Inner,XXX,Nested Loop
+25b.sql :,3,5493,XXX,Hash Join,Inner,XXX,Nested Loop
+25b.sql :,103,10138,XXX,Hash Join,Inner,XXX,Hash Join
+25b.sql :,5089,153308,XXX,Hash,XXX,XXX,Hash Join
+25b.sql :,5089,153308,XXX,Hash Join,Inner,XXX,Hash
+25c.sql :,1,8718,XXX,Nested Loop,Inner,XXX,Aggregate
+25c.sql :,1,8718,XXX,Nested Loop,Inner,XXX,Nested Loop
+25c.sql :,112,313684,XXX,Hash Join,Inner,XXX,Nested Loop
+25c.sql :,9,9358,XXX,Hash,XXX,XXX,Hash Join
+25c.sql :,9,9358,XXX,Nested Loop,Inner,XXX,Hash
+25c.sql :,21,18052,XXX,Hash Join,Inner,XXX,Nested Loop
+25c.sql :,18,34172,XXX,Hash,XXX,XXX,Hash Join
+25c.sql :,18,34172,XXX,Hash Join,Inner,XXX,Hash
+25c.sql :,648,62198,XXX,Hash Join,Inner,XXX,Hash Join
+25c.sql :,5089,153308,XXX,Hash,XXX,XXX,Hash Join
+25c.sql :,5089,153308,XXX,Hash Join,Inner,XXX,Hash
+26a.sql :,1,1728,XXX,Nested Loop,Inner,XXX,Aggregate
+26a.sql :,1,58947,XXX,Gather,XXX,XXX,Nested Loop
+26a.sql :,1,19649,XXX,Nested Loop,Inner,XXX,Gather
+26a.sql :,22,4227203,XXX,Hash Join,Inner,XXX,Nested Loop
+26a.sql :,12,25822,XXX,Hash,XXX,XXX,Hash Join
+26a.sql :,12,25822,XXX,Nested Loop,Inner,XXX,Hash
+26a.sql :,12,25822,XXX,Hash Join,Inner,XXX,Nested Loop
+26a.sql :,1,216,XXX,Hash,XXX,XXX,Hash Join
+26a.sql :,1,216,XXX,Nested Loop,Inner,XXX,Hash
+26a.sql :,7,2001,XXX,Nested Loop,Inner,XXX,Nested Loop
+26a.sql :,13,5966,XXX,Hash Join,Inner,XXX,Nested Loop
+26a.sql :,8443,85941,XXX,Hash,XXX,XXX,Hash Join
+26a.sql :,8443,85941,XXX,Hash Join,Inner,XXX,Hash
+26b.sql :,1,93,XXX,Nested Loop,Inner,XXX,Aggregate
+26b.sql :,1,2300,XXX,Gather,XXX,XXX,Nested Loop
+26b.sql :,1,767,XXX,Nested Loop,Inner,XXX,Gather
+26b.sql :,10,311287,XXX,Hash Join,Inner,XXX,Nested Loop
+26b.sql :,6,1407,XXX,Hash,XXX,XXX,Hash Join
+26b.sql :,6,1407,XXX,Nested Loop,Inner,XXX,Hash
+26b.sql :,6,1407,XXX,Hash Join,Inner,XXX,Nested Loop
+26b.sql :,1,11,XXX,Hash,XXX,XXX,Hash Join
+26b.sql :,1,11,XXX,Nested Loop,Inner,XXX,Hash
+26b.sql :,1,320,XXX,Nested Loop,Inner,XXX,Nested Loop
+26b.sql :,3,804,XXX,Hash Join,Inner,XXX,Nested Loop
+26b.sql :,8443,85941,XXX,Hash,XXX,XXX,Hash Join
+26b.sql :,8443,85941,XXX,Hash Join,Inner,XXX,Hash
+26c.sql :,1,5400,XXX,Gather,XXX,XXX,Aggregate
+26c.sql :,1,1800,XXX,Nested Loop,Inner,XXX,Gather
+26c.sql :,6,63246,XXX,Nested Loop,Inner,XXX,Nested Loop
+26c.sql :,6,63246,XXX,Hash Join,Inner,XXX,Nested Loop
+26c.sql :,1,420,XXX,Hash,XXX,XXX,Hash Join
+26c.sql :,1,420,XXX,Nested Loop,Inner,XXX,Hash
+26c.sql :,13,97715,XXX,Hash Join,Inner,XXX,Nested Loop
+26c.sql :,8,1343,XXX,Hash,XXX,XXX,Hash Join
+26c.sql :,8,1343,XXX,Hash Join,Inner,XXX,Hash
+26c.sql :,51,4312,XXX,Nested Loop,Inner,XXX,Hash Join
+26c.sql :,94,20520,XXX,Hash Join,Inner,XXX,Nested Loop
+26c.sql :,8443,85941,XXX,Hash,XXX,XXX,Hash Join
+26c.sql :,8443,85941,XXX,Hash Join,Inner,XXX,Hash
+27a.sql :,1,477,XXX,Nested Loop,Inner,XXX,Aggregate
+27a.sql :,1,477,XXX,Nested Loop,Inner,XXX,Nested Loop
+27a.sql :,1,415,XXX,Nested Loop,Inner,XXX,Nested Loop
+27a.sql :,1,525,XXX,Nested Loop,Inner,XXX,Nested Loop
+27a.sql :,1,525,XXX,Nested Loop,Inner,XXX,Nested Loop
+27a.sql :,1,564,XXX,Nested Loop,Inner,XXX,Nested Loop
+27a.sql :,1,1591,XXX,Nested Loop,Inner,XXX,Nested Loop
+27a.sql :,1,1831,XXX,Gather,XXX,XXX,Nested Loop
+27a.sql :,1,610,XXX,Hash Join,Inner,XXX,Gather
+27a.sql :,1,294,XXX,Hash,XXX,XXX,Hash Join
+27a.sql :,1,294,XXX,Hash Join,Inner,XXX,Hash
+27a.sql :,5,1847,XXX,Hash,XXX,XXX,Hash Join
+27a.sql :,5,1847,XXX,Nested Loop,Inner,XXX,Hash
+27a.sql :,14,3515,XXX,Hash Join,Inner,XXX,Nested Loop
+27b.sql :,1,247,XXX,Nested Loop,Inner,XXX,Aggregate
+27b.sql :,1,247,XXX,Nested Loop,Inner,XXX,Nested Loop
+27b.sql :,1,418,XXX,Nested Loop,Inner,XXX,Nested Loop
+27b.sql :,1,475,XXX,Nested Loop,Inner,XXX,Nested Loop
+27b.sql :,1,475,XXX,Nested Loop,Inner,XXX,Nested Loop
+27b.sql :,1,38,XXX,Gather,XXX,XXX,Nested Loop
+27b.sql :,1,13,XXX,Nested Loop,Inner,XXX,Gather
+27b.sql :,1,258,XXX,Nested Loop,Inner,XXX,Nested Loop
+27b.sql :,3,755,XXX,Nested Loop,Inner,XXX,Nested Loop
+27b.sql :,13,853,XXX,Hash Join,Inner,XXX,Nested Loop
+27b.sql :,5,424,XXX,Hash,XXX,XXX,Hash Join
+27b.sql :,5,424,XXX,Hash Join,Inner,XXX,Hash
+27b.sql :,14,3515,XXX,Hash,XXX,XXX,Hash Join
+27b.sql :,14,3515,XXX,Hash Join,Inner,XXX,Hash
+27c.sql :,1,743,XXX,Nested Loop,Inner,XXX,Aggregate
+27c.sql :,1,743,XXX,Nested Loop,Inner,XXX,Nested Loop
+27c.sql :,1,1028,XXX,Nested Loop,Inner,XXX,Nested Loop
+27c.sql :,4,1028,XXX,Hash Join,Inner,XXX,Nested Loop
+27c.sql :,3,1894,XXX,Hash,XXX,XXX,Hash Join
+27c.sql :,3,1894,XXX,Nested Loop,Inner,XXX,Hash
+27c.sql :,4,1894,XXX,Hash Join,Inner,XXX,Nested Loop
+27c.sql :,12,2227,XXX,Gather,XXX,XXX,Hash Join
+27c.sql :,5,742,XXX,Nested Loop,Inner,XXX,Gather
+27c.sql :,24,3615,XXX,Hash Join,Inner,XXX,Nested Loop
+27c.sql :,95,4263,XXX,Hash Join,Inner,XXX,Hash Join
+27c.sql :,38,3055,XXX,Hash,XXX,XXX,Hash Join
+27c.sql :,38,3055,XXX,Hash Join,Inner,XXX,Hash
+27c.sql :,14,3515,XXX,Hash,XXX,XXX,Hash Join
+27c.sql :,14,3515,XXX,Hash Join,Inner,XXX,Hash
+28a.sql :,1,4803,XXX,Nested Loop,Inner,XXX,Aggregate
+28a.sql :,1,6156,XXX,Nested Loop,Inner,XXX,Nested Loop
+28a.sql :,1,41034,XXX,Nested Loop,Inner,XXX,Nested Loop
+28a.sql :,1,45102,XXX,Gather,XXX,XXX,Nested Loop
+28a.sql :,1,15034,XXX,Nested Loop,Inner,XXX,Gather
+28a.sql :,2,1781354,XXX,Hash Join,Inner,XXX,Nested Loop
+28a.sql :,1,23063,XXX,Hash,XXX,XXX,Hash Join
+28a.sql :,1,23063,XXX,Nested Loop,Inner,XXX,Hash
+28a.sql :,5,27325,XXX,Nested Loop,Inner,XXX,Nested Loop
+28a.sql :,9,35802,XXX,Nested Loop,Inner,XXX,Nested Loop
+28a.sql :,9,35802,XXX,Nested Loop,Inner,XXX,Nested Loop
+28a.sql :,17,42758,XXX,Hash Join,Inner,XXX,Nested Loop
+28a.sql :,65,71080,XXX,Hash,XXX,XXX,Hash Join
+28a.sql :,65,71080,XXX,Hash Join,Inner,XXX,Hash
+28a.sql :,7400,85451,XXX,Hash Join,Inner,XXX,Hash Join
+28a.sql :,4943,151410,XXX,Hash,XXX,XXX,Hash Join
+28a.sql :,4943,151410,XXX,Hash Join,Inner,XXX,Hash
+28b.sql :,1,148,XXX,Nested Loop,Inner,XXX,Aggregate
+28b.sql :,1,240,XXX,Nested Loop,Inner,XXX,Nested Loop
+28b.sql :,1,333,XXX,Gather,XXX,XXX,Nested Loop
+28b.sql :,1,111,XXX,Nested Loop,Inner,XXX,Gather
+28b.sql :,1,9608,XXX,Hash Join,Inner,XXX,Nested Loop
+28b.sql :,1,102,XXX,Hash,XXX,XXX,Hash Join
+28b.sql :,1,102,XXX,Nested Loop,Inner,XXX,Hash
+28b.sql :,1,102,XXX,Hash Join,Inner,XXX,Nested Loop
+28b.sql :,1,1402,XXX,Hash,XXX,XXX,Hash Join
+28b.sql :,1,1402,XXX,Nested Loop,Inner,XXX,Hash
+28b.sql :,4,1429,XXX,Nested Loop,Inner,XXX,Nested Loop
+28b.sql :,11,5986,XXX,Nested Loop,Inner,XXX,Nested Loop
+28b.sql :,20,6294,XXX,Hash Join,Inner,XXX,Nested Loop
+28c.sql :,1,8373,XXX,Nested Loop,Inner,XXX,Aggregate
+28c.sql :,1,8771,XXX,Nested Loop,Inner,XXX,Nested Loop
+28c.sql :,1,8771,XXX,Gather,XXX,XXX,Nested Loop
+28c.sql :,1,2924,XXX,Hash Join,Inner,XXX,Gather
+28c.sql :,1,259,XXX,Hash,XXX,XXX,Hash Join
+28c.sql :,1,259,XXX,Nested Loop,Inner,XXX,Hash
+28c.sql :,1,35484,XXX,Hash Join,Inner,XXX,Nested Loop
+28c.sql :,1,1111,XXX,Hash,XXX,XXX,Hash Join
+28c.sql :,1,1111,XXX,Nested Loop,Inner,XXX,Hash
+28c.sql :,4,3345,XXX,Hash Join,Inner,XXX,Nested Loop
+28c.sql :,7,1480,XXX,Hash,XXX,XXX,Hash Join
+28c.sql :,7,1480,XXX,Hash Join,Inner,XXX,Hash
+28c.sql :,24,1663,XXX,Nested Loop,Inner,XXX,Hash Join
+28c.sql :,60,10350,XXX,Hash Join,Inner,XXX,Nested Loop
+29a.sql :,1,1620,XXX,Nested Loop,Inner,XXX,Aggregate
+29a.sql :,1,174960,XXX,Gather,XXX,XXX,Nested Loop
+29a.sql :,1,58320,XXX,Hash Join,Inner,XXX,Gather
+29a.sql :,1,19440,XXX,Hash,XXX,XXX,Hash Join
+29a.sql :,1,19440,XXX,Nested Loop,Inner,XXX,Hash
+29a.sql :,1,58680,XXX,Nested Loop,Inner,XXX,Nested Loop
+29a.sql :,1,258192,XXX,Hash Join,Inner,XXX,Nested Loop
+29a.sql :,1,11736,XXX,Hash,XXX,XXX,Hash Join
+29a.sql :,1,11736,XXX,Nested Loop,Inner,XXX,Hash
+29a.sql :,1,11736,XXX,Nested Loop,Inner,XXX,Nested Loop
+29a.sql :,5,12744,XXX,Hash Join,Inner,XXX,Nested Loop
+29a.sql :,1,118,XXX,Hash,XXX,XXX,Hash Join
+29a.sql :,1,118,XXX,Nested Loop,Inner,XXX,Hash
+29a.sql :,66,16084,XXX,Hash Join,Inner,XXX,Nested Loop
+29a.sql :,795,62551,XXX,Hash Join,Inner,XXX,Hash Join
+29a.sql :,32,2165,XXX,Hash,XXX,XXX,Hash Join
+29a.sql :,32,2165,XXX,Hash Join,Inner,XXX,Hash
+29a.sql :,42,1510,XXX,Hash,XXX,XXX,Hash Join
+29a.sql :,42,1510,XXX,Hash Join,Inner,XXX,Hash
+29b.sql :,1,15,XXX,Nested Loop,Inner,XXX,Aggregate
+29b.sql :,1,15,XXX,Nested Loop,Inner,XXX,Nested Loop
+29b.sql :,1,66,XXX,Gather,XXX,XXX,Nested Loop
+29b.sql :,1,22,XXX,Hash Join,Inner,XXX,Gather
+29b.sql :,1,108,XXX,Hash Join,Inner,XXX,Nested Loop
+29b.sql :,1,13,XXX,Hash,XXX,XXX,Hash Join
+29b.sql :,1,13,XXX,Hash Join,Inner,XXX,Hash
+29b.sql :,166,4705,XXX,Hash Join,Inner,XXX,Nested Loop
+29c.sql :,1,16308,XXX,Nested Loop,Inner,XXX,Aggregate
+29c.sql :,1,16368,XXX,Gather,XXX,XXX,Nested Loop
+29c.sql :,1,5456,XXX,Hash Join,Inner,XXX,Gather
+29c.sql :,1,1294,XXX,Hash,XXX,XXX,Hash Join
+29c.sql :,1,1294,XXX,Nested Loop,Inner,XXX,Hash
+29c.sql :,1,1294,XXX,Nested Loop,Inner,XXX,Nested Loop
+29c.sql :,2,5855,XXX,Hash Join,Inner,XXX,Nested Loop
+29c.sql :,1,223,XXX,Hash,XXX,XXX,Hash Join
+29c.sql :,1,223,XXX,Nested Loop,Inner,XXX,Hash
+29c.sql :,1,5586,XXX,Nested Loop,Inner,XXX,Nested Loop
+29c.sql :,1,5747,XXX,Hash Join,Inner,XXX,Nested Loop
+29c.sql :,10925,206842,XXX,Hash Join,Inner,XXX,Hash Join
+29c.sql :,1,626,XXX,Hash,XXX,XXX,Hash Join
+29c.sql :,1,626,XXX,Hash Join,Inner,XXX,Hash
+29c.sql :,1,21,XXX,Hash,XXX,XXX,Hash Join
+29c.sql :,1,21,XXX,Nested Loop,Inner,XXX,Hash
+29c.sql :,537,176969,XXX,Hash Join,Inner,XXX,Nested Loop
+29c.sql :,42,1510,XXX,Hash,XXX,XXX,Hash Join
+29c.sql :,42,1510,XXX,Hash Join,Inner,XXX,Hash
+2a.sql :,3,2611,XXX,Nested Loop,Inner,XXX,Aggregate
+2a.sql :,3,2611,XXX,Nested Loop,Inner,XXX,Nested Loop
+2a.sql :,73,49517,XXX,Hash Join,Inner,XXX,Nested Loop
+2a.sql :,14,13947,XXX,Hash,XXX,XXX,Hash Join
+2a.sql :,14,13947,XXX,Hash Join,Inner,XXX,Hash
+2b.sql :,2,5228,XXX,Gather,XXX,XXX,Aggregate
+2b.sql :,1,1743,XXX,Nested Loop,Inner,XXX,Gather
+2b.sql :,1,1743,XXX,Nested Loop,Inner,XXX,Nested Loop
+2b.sql :,73,49517,XXX,Hash Join,Inner,XXX,Nested Loop
+2b.sql :,14,13947,XXX,Hash,XXX,XXX,Hash Join
+2b.sql :,14,13947,XXX,Hash Join,Inner,XXX,Hash
+2c.sql :,73,49517,XXX,Hash Join,Inner,XXX,Nested Loop
+2c.sql :,14,13947,XXX,Hash,XXX,XXX,Hash Join
+2c.sql :,14,13947,XXX,Hash Join,Inner,XXX,Hash
+2d.sql :,26,22772,XXX,Nested Loop,Inner,XXX,Aggregate
+2d.sql :,73,49517,XXX,Hash Join,Inner,XXX,Nested Loop
+2d.sql :,14,13947,XXX,Hash,XXX,XXX,Hash Join
+2d.sql :,14,13947,XXX,Nested Loop,Inner,XXX,Hash
+2d.sql :,14,13947,XXX,Hash Join,Inner,XXX,Nested Loop
+30a.sql :,1,757,XXX,Nested Loop,Inner,XXX,Aggregate
+30a.sql :,1,1021,XXX,Gather,XXX,XXX,Nested Loop
+30a.sql :,1,340,XXX,Hash Join,Inner,XXX,Gather
+30a.sql :,1,387,XXX,Hash,XXX,XXX,Hash Join
+30a.sql :,1,387,XXX,Nested Loop,Inner,XXX,Hash
+30a.sql :,1,2749,XXX,Nested Loop,Inner,XXX,Nested Loop
+30a.sql :,5,110410,XXX,Hash Join,Inner,XXX,Nested Loop
+30a.sql :,1,1646,XXX,Hash,XXX,XXX,Hash Join
+30a.sql :,1,1646,XXX,Nested Loop,Inner,XXX,Hash
+30a.sql :,37,4973,XXX,Hash Join,Inner,XXX,Nested Loop
+30a.sql :,12,1648,XXX,Hash,XXX,XXX,Hash Join
+30a.sql :,12,1648,XXX,Hash Join,Inner,XXX,Hash
+30b.sql :,1,28,XXX,Nested Loop,Inner,XXX,Aggregate
+30b.sql :,1,28,XXX,Nested Loop,Inner,XXX,Nested Loop
+30b.sql :,1,108,XXX,Nested Loop,Inner,XXX,Nested Loop
+30b.sql :,1,108,XXX,Nested Loop,Inner,XXX,Nested Loop
+30b.sql :,1,12984,XXX,Nested Loop,Inner,XXX,Nested Loop
+30b.sql :,1,21209,XXX,Gather,XXX,XXX,Nested Loop
+30b.sql :,1,7070,XXX,Hash Join,Inner,XXX,Gather
+30b.sql :,1,10505,XXX,Hash,XXX,XXX,Hash Join
+30b.sql :,1,10505,XXX,Nested Loop,Inner,XXX,Hash
+30b.sql :,86,299044,XXX,Hash Join,Inner,XXX,Nested Loop
+30b.sql :,7,13022,XXX,Hash,XXX,XXX,Hash Join
+30b.sql :,7,13022,XXX,Hash Join,Inner,XXX,Hash
+30b.sql :,763,13285,XXX,Hash Join,Inner,XXX,Hash Join
+30b.sql :,5089,153308,XXX,Hash,XXX,XXX,Hash Join
+30b.sql :,5089,153308,XXX,Hash Join,Inner,XXX,Hash
+30c.sql :,1,8024,XXX,Gather,XXX,XXX,Aggregate
+30c.sql :,1,2675,XXX,Nested Loop,Inner,XXX,Gather
+30c.sql :,1,112848,XXX,Hash Join,Inner,XXX,Nested Loop
+30c.sql :,1,1462,XXX,Hash,XXX,XXX,Hash Join
+30c.sql :,1,1462,XXX,Nested Loop,Inner,XXX,Hash
+30c.sql :,4,4416,XXX,Hash Join,Inner,XXX,Nested Loop
+30c.sql :,8,1462,XXX,Hash,XXX,XXX,Hash Join
+30c.sql :,8,1462,XXX,Nested Loop,Inner,XXX,Hash
+30c.sql :,8,1462,XXX,Nested Loop,Inner,XXX,Nested Loop
+30c.sql :,18,2421,XXX,Hash Join,Inner,XXX,Nested Loop
+30c.sql :,15,3442,XXX,Hash,XXX,XXX,Hash Join
+30c.sql :,15,3442,XXX,Hash Join,Inner,XXX,Hash
+31a.sql :,1,1273,XXX,Gather,XXX,XXX,Aggregate
+31a.sql :,1,424,XXX,Nested Loop,Inner,XXX,Gather
+31a.sql :,2,15754,XXX,Hash Join,Inner,XXX,Nested Loop
+31a.sql :,1,146,XXX,Hash,XXX,XXX,Hash Join
+31a.sql :,1,146,XXX,Nested Loop,Inner,XXX,Hash
+31a.sql :,1,146,XXX,Nested Loop,Inner,XXX,Nested Loop
+31a.sql :,8,31220,XXX,Hash Join,Inner,XXX,Nested Loop
+31a.sql :,3,3888,XXX,Hash,XXX,XXX,Hash Join
+31a.sql :,3,3888,XXX,Nested Loop,Inner,XXX,Hash
+31a.sql :,8,7262,XXX,Hash Join,Inner,XXX,Nested Loop
+31a.sql :,7,13022,XXX,Hash,XXX,XXX,Hash Join
+31a.sql :,7,13022,XXX,Hash Join,Inner,XXX,Hash
+31a.sql :,252,24086,XXX,Hash Join,Inner,XXX,Hash Join
+31a.sql :,5089,153308,XXX,Hash,XXX,XXX,Hash Join
+31a.sql :,5089,153308,XXX,Hash Join,Inner,XXX,Hash
+31b.sql :,1,28,XXX,Nested Loop,Inner,XXX,Aggregate
+31b.sql :,1,28,XXX,Nested Loop,Inner,XXX,Nested Loop
+31b.sql :,1,895,XXX,Hash Join,Inner,XXX,Nested Loop
+31b.sql :,1,28,XXX,Nested Loop,Inner,XXX,Nested Loop
+31b.sql :,1,1054,XXX,Hash Join,Inner,XXX,Nested Loop
+31b.sql :,1,1236,XXX,Hash,XXX,XXX,Hash Join
+31b.sql :,1,1236,XXX,Hash Join,Inner,XXX,Hash
+31b.sql :,5089,153308,XXX,Hash Join,Inner,XXX,Hash Join
+31b.sql :,5,1237,XXX,Hash,XXX,XXX,Hash Join
+31b.sql :,5,1237,XXX,Hash Join,Inner,XXX,Hash
+31b.sql :,252,24086,XXX,Hash Join,Inner,XXX,Hash Join
+31c.sql :,1,2825,XXX,Gather,XXX,XXX,Aggregate
+31c.sql :,1,942,XXX,Nested Loop,Inner,XXX,Gather
+31c.sql :,1,942,XXX,Nested Loop,Inner,XXX,Nested Loop
+31c.sql :,5,35802,XXX,Hash Join,Inner,XXX,Nested Loop
+31c.sql :,1,339,XXX,Hash,XXX,XXX,Hash Join
+31c.sql :,1,339,XXX,Nested Loop,Inner,XXX,Hash
+31c.sql :,1,339,XXX,Nested Loop,Inner,XXX,Nested Loop
+31c.sql :,50,124952,XXX,Hash Join,Inner,XXX,Nested Loop
+31c.sql :,21,18052,XXX,Hash,XXX,XXX,Hash Join
+31c.sql :,21,18052,XXX,Hash Join,Inner,XXX,Hash
+31c.sql :,18,34172,XXX,Hash,XXX,XXX,Hash Join
+31c.sql :,18,34172,XXX,Hash Join,Inner,XXX,Hash
+31c.sql :,648,62198,XXX,Hash Join,Inner,XXX,Hash Join
+31c.sql :,5089,153308,XXX,Hash,XXX,XXX,Hash Join
+31c.sql :,5089,153308,XXX,Hash Join,Inner,XXX,Hash
+32b.sql :,5,1463,XXX,Nested Loop,Inner,XXX,Aggregate
+32b.sql :,5,1463,XXX,Nested Loop,Inner,XXX,Nested Loop
+32b.sql :,5,1463,XXX,Nested Loop,Inner,XXX,Nested Loop
+32b.sql :,5,1463,XXX,Hash Join,Inner,XXX,Nested Loop
+32b.sql :,14,13947,XXX,Hash Join,Inner,XXX,Hash Join
+33a.sql :,1,12,XXX,Nested Loop,Inner,XXX,Nested Loop
+33a.sql :,1,12,XXX,Nested Loop,Inner,XXX,Nested Loop
+33a.sql :,1,13,XXX,Nested Loop,Inner,XXX,Nested Loop
+33b.sql :,1,14,XXX,Gather,XXX,XXX,Nested Loop
+33b.sql :,1,46,XXX,Nested Loop,Inner,XXX,Nested Loop
+33b.sql :,1,50,XXX,Nested Loop,Inner,XXX,Nested Loop
+33b.sql :,1,50,XXX,Nested Loop,Inner,XXX,Nested Loop
+33b.sql :,1,57,XXX,Nested Loop,Inner,XXX,Nested Loop
+33c.sql :,1,114,XXX,Gather,XXX,XXX,Aggregate
+33c.sql :,1,38,XXX,Nested Loop,Inner,XXX,Gather
+33c.sql :,2,114,XXX,Nested Loop,Inner,XXX,Nested Loop
+33c.sql :,5,133,XXX,Hash Join,Inner,XXX,Nested Loop
+3a.sql :,182,4317,XXX,Hash,XXX,XXX,Hash Join
+3a.sql :,182,4317,XXX,Hash Join,Inner,XXX,Hash
+3b.sql :,182,4317,XXX,Hash,XXX,XXX,Hash Join
+3b.sql :,182,4317,XXX,Hash Join,Inner,XXX,Hash
+3c.sql :,240,2417,XXX,Hash Join,Inner,XXX,Aggregate
+3c.sql :,126,2625,XXX,Hash,XXX,XXX,Hash Join
+3c.sql :,126,2625,XXX,Nested Loop,Inner,XXX,Hash
+3c.sql :,182,4317,XXX,Hash Join,Inner,XXX,Nested Loop
+4a.sql :,2,740,XXX,Gather,XXX,XXX,Aggregate
+4a.sql :,1,247,XXX,Nested Loop,Inner,XXX,Gather
+4a.sql :,2,1940,XXX,Hash Join,Inner,XXX,Nested Loop
+4a.sql :,1906,117663,XXX,Hash Join,Inner,XXX,Hash Join
+4a.sql :,182,4317,XXX,Hash,XXX,XXX,Hash Join
+4a.sql :,182,4317,XXX,Hash Join,Inner,XXX,Hash
+4b.sql :,1,21,XXX,Gather,XXX,XXX,Nested Loop
+4c.sql :,2,1567,XXX,Nested Loop,Inner,XXX,Aggregate
+4c.sql :,3,2697,XXX,Hash Join,Inner,XXX,Nested Loop
+4c.sql :,2972,149656,XXX,Hash Join,Inner,XXX,Hash Join
+4c.sql :,182,4317,XXX,Hash,XXX,XXX,Hash Join
+4c.sql :,182,4317,XXX,Hash Join,Inner,XXX,Hash
+5b.sql :,28,473,movie_companies,Seq Scan,XXX,XXX,Hash Join
+6b.sql :,1,12,XXX,Nested Loop,Inner,XXX,Aggregate
+6b.sql :,1,383,XXX,Gather,XXX,XXX,Nested Loop
+6b.sql :,1,128,XXX,Hash Join,Inner,XXX,Gather
+6b.sql :,1,12,XXX,Hash,XXX,XXX,Hash Join
+6b.sql :,1,12,XXX,Nested Loop,Inner,XXX,Hash
+6b.sql :,112,11849,XXX,Hash Join,Inner,XXX,Nested Loop
+6c.sql :,1,33,XXX,Gather,XXX,XXX,Nested Loop
+6c.sql :,1,11,XXX,Hash Join,Inner,XXX,Gather
+6d.sql :,1,88,XXX,Gather,XXX,XXX,Aggregate
+6d.sql :,1,29,XXX,Nested Loop,Inner,XXX,Gather
+6d.sql :,2062,261826,XXX,Hash Join,Inner,XXX,Nested Loop
+6d.sql :,61,4722,XXX,Hash,XXX,XXX,Hash Join
+6d.sql :,61,4722,XXX,Nested Loop,Inner,XXX,Hash
+6d.sql :,112,11849,XXX,Hash Join,Inner,XXX,Nested Loop
+6f.sql :,2062,261826,XXX,Nested Loop,Inner,XXX,Aggregate
+6f.sql :,2062,261826,XXX,Hash Join,Inner,XXX,Nested Loop
+6f.sql :,61,4722,XXX,Hash,XXX,XXX,Hash Join
+6f.sql :,61,4722,XXX,Nested Loop,Inner,XXX,Hash
+6f.sql :,112,11849,XXX,Hash Join,Inner,XXX,Nested Loop
+7a.sql :,1,32,XXX,Nested Loop,Inner,XXX,Aggregate
+7a.sql :,1,151,XXX,Nested Loop,Inner,XXX,Nested Loop
+7a.sql :,1,3354,XXX,Gather,XXX,XXX,Nested Loop
+7a.sql :,1,1118,XXX,Hash Join,Inner,XXX,Gather
+7a.sql :,1,33,XXX,Hash Join,Inner,XXX,Nested Loop
+7a.sql :,1,21,XXX,Hash,XXX,XXX,Hash Join
+7a.sql :,1,21,XXX,Hash Join,Inner,XXX,Hash
+7b.sql :,1,16,XXX,Nested Loop,Inner,XXX,Aggregate
+7b.sql :,1,46,XXX,Nested Loop,Inner,XXX,Nested Loop
+7b.sql :,1,353,XXX,Gather,XXX,XXX,Nested Loop
+7b.sql :,1,118,XXX,Hash Join,Inner,XXX,Gather
+7b.sql :,1,33,XXX,Hash Join,Inner,XXX,Nested Loop
+7b.sql :,1,21,XXX,Hash,XXX,XXX,Hash Join
+7b.sql :,1,21,XXX,Hash Join,Inner,XXX,Hash
+7c.sql :,2,22728,XXX,Hash Join,Inner,XXX,Aggregate
+7c.sql :,1,13386,XXX,Hash,XXX,XXX,Hash Join
+7c.sql :,1,13386,XXX,Hash Join,Inner,XXX,Hash
+7c.sql :,189,176455,XXX,Nested Loop,Inner,XXX,Hash Join
+7c.sql :,307,305764,XXX,Hash Join,Inner,XXX,Nested Loop
+7c.sql :,35,4354,XXX,Hash,XXX,XXX,Hash Join
+7c.sql :,35,4354,XXX,Nested Loop,Inner,XXX,Hash
+7c.sql :,310,28061,XXX,Hash Join,Inner,XXX,Nested Loop
+8a.sql :,1,62,XXX,Nested Loop,Inner,XXX,Aggregate
+8a.sql :,1,62,XXX,Gather,XXX,XXX,Nested Loop
+8a.sql :,1,21,XXX,Nested Loop,Inner,XXX,Gather
+8a.sql :,1,5793,XXX,Hash Join,Inner,XXX,Nested Loop
+8a.sql :,1,2479,XXX,Hash,XXX,XXX,Hash Join
+8a.sql :,1,2479,XXX,Nested Loop,Inner,XXX,Hash
+8a.sql :,15,2511,XXX,Hash Join,Inner,XXX,Nested Loop
+8b.sql :,1,24,XXX,Nested Loop,Inner,XXX,Nested Loop
+8b.sql :,1,24,XXX,Gather,XXX,XXX,Nested Loop
+8b.sql :,1,360,XXX,Hash Join,Inner,XXX,Nested Loop
+8b.sql :,140,2856,XXX,Hash,XXX,XXX,Hash Join
+8b.sql :,140,2856,movie_companies,Seq Scan,XXX,XXX,Hash
+9a.sql :,1,121,XXX,Nested Loop,Inner,XXX,Aggregate
+9a.sql :,1,341,XXX,Nested Loop,Inner,XXX,Nested Loop
+9a.sql :,1,359,XXX,Gather,XXX,XXX,Nested Loop
+9a.sql :,1,120,XXX,Hash Join,Inner,XXX,Gather
+9a.sql :,1,110,XXX,Hash,XXX,XXX,Hash Join
+9a.sql :,1,110,XXX,Nested Loop,Inner,XXX,Hash
+9b.sql :,1,40,XXX,Nested Loop,Inner,XXX,Aggregate
+9b.sql :,1,94,XXX,Nested Loop,Inner,XXX,Nested Loop
+9b.sql :,1,94,XXX,Nested Loop,Inner,XXX,Nested Loop
+9b.sql :,1,103,XXX,Gather,XXX,XXX,Nested Loop
+9b.sql :,1,34,XXX,Hash Join,Inner,XXX,Gather
+9b.sql :,1,29,XXX,Hash,XXX,XXX,Hash Join
+9b.sql :,1,29,XXX,Nested Loop,Inner,XXX,Hash
+9d.sql :,7143,161027,XXX,Hash Join,Inner,XXX,Aggregate
+9d.sql :,2947,57856,XXX,Hash,XXX,XXX,Hash Join
+9d.sql :,2947,57856,XXX,Nested Loop,Inner,XXX,Hash
+9d.sql :,2947,57856,XXX,Nested Loop,Inner,XXX,Nested Loop
+9d.sql :,6061,63155,XXX,Nested Loop,Inner,XXX,Nested Loop

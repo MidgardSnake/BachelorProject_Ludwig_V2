@@ -25,9 +25,10 @@ def parse_plan(plan, parent_info=""):
     # Initial check on the current level
     deviations = []
     if estimated_rows > 0:
-        deviation1 = abs(actual_rows/estimated_rows)
-        deviation = abs(1-deviation1) +1
-        deviations.append((estimated_rows, actual_rows, deviation, additional_info))
+        if estimated_rows != actual_rows:
+            deviation1 = abs(actual_rows/estimated_rows)
+            deviation = abs(1-deviation1) +1
+            deviations.append((estimated_rows, actual_rows, deviation, additional_info))
 
     # Check for nested plans
     if "Plans" in plan:
@@ -36,7 +37,7 @@ def parse_plan(plan, parent_info=""):
 
     return deviations
 
-def identify_critical_misestimates(input_file, output_csv, threshold=1.01):
+def identify_critical_misestimates(input_file, output_csv):
     critical_entries = []
 
     with open(input_file, mode='r') as csvfile:
@@ -54,7 +55,6 @@ def identify_critical_misestimates(input_file, output_csv, threshold=1.01):
 
                 # Prüfen auf kritische Abweichungen
                 for estimated_rows, actual_rows, deviation, additional_info in deviations:
-                    if deviation >= threshold:
                         critical_entries.append([
                             query_name,
                             estimated_rows,
@@ -90,7 +90,7 @@ def identify_critical_misestimates(input_file, output_csv, threshold=1.01):
 
 # Aufruf der Funktion
 input_file = '/Users/lui/PycharmProjects/BachelorProject_Ludwig_V2/IMDb/Resultfiles/explain_analysis_results.csv'
-output_csv = '/Users/lui/PycharmProjects/BachelorProject_Ludwig_V2/IMDb/Resultfiles/CRITICAL_values_bias1.01.csv'
+output_csv = '/Users/lui/PycharmProjects/BachelorProject_Ludwig_V2/IMDb/Resultfiles/CRITICAL_values_no_limit.csv'
 identify_critical_misestimates(input_file, output_csv)
 
 

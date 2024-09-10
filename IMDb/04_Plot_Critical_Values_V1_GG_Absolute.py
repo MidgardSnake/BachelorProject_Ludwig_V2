@@ -13,22 +13,21 @@ class QueryAnalyzer:
             raise
 
     def filter_queries(self):
-        # Filter for queries that end with 'a', using a regex pattern
-        #self.df = self.df[self.df['Query Name'].apply(lambda x: bool(re.match(r'.*a\.sql', x)))]
-        # Remove whitespace from column names and clean data
         self.df.columns = self.df.columns.str.strip()
         self.df = self.df.dropna()
 
-        # Convert the 'Estimated Rows' and 'Actual Rows' to numeric, coercing errors
         self.df['Estimated Rows'] = pd.to_numeric(self.df['Estimated Rows'], errors='coerce')
         self.df['Actual Rows'] = pd.to_numeric(self.df['Actual Rows'], errors='coerce')
 
-        # Drop rows where conversion to numeric failed
+
         self.df = self.df.dropna(subset=['Estimated Rows', 'Actual Rows'])
 
     def calculate_deviation(self):
-        # Calculate amount deviation
-        self.df['Deviation (in rows)'] = (self.df['Actual Rows'] - self.df['Estimated Rows'])
+        # Calculate the deviation for each row
+        self.df['Deviation (in rows)'] = self.df['Actual Rows'] - self.df['Estimated Rows']
+
+        # Calculate the cumulative deviation for each 'Query Name'
+        self.df['Cumulative Deviation'] = self.df.groupby('Query Name')['Deviation (in rows)'].cumsum()
 
     def plot_deviation(self):
         # Extract the numeric part of the query name for sorting
@@ -41,10 +40,10 @@ class QueryAnalyzer:
         plt.figure(figsize=(12, 6))
 
         # Create a boxplot for each query
-        sns.boxplot(x='Query Name', y='Deviation (in rows)', data=self.df, showfliers=False)
+        sns.boxplot(x='Query Name', y='Deviation (in rows)', data=self.df, showfliers=True)
 
         # Set the title and labels
-        plt.title('Complete List of all misestimations [Error deviation from 1%] ')
+        plt.title('Complete List of all misestimations [Error deviation of 1000%] ')
         plt.xlabel('Query Name')
         plt.xticks(rotation=45, ha='right')
         plt.ylabel('Deviation (in rows)')
@@ -67,6 +66,7 @@ class QueryAnalyzer:
         self.calculate_deviation()
         self.plot_deviation()
 
+
 # Example usage:
-analyzer = QueryAnalyzer('/Users/lui/PycharmProjects/BachelorProject_Ludwig_V2/IMDb/Resultfiles/CRITICAL_values_bias1.01.csv')
+analyzer = QueryAnalyzer('/Users/lui/PycharmProjects/BachelorProject_Ludwig_V2/IMDb/Resultfiles/CRITICAL_values_no_limit.csv')
 analyzer.analyze_and_plot()

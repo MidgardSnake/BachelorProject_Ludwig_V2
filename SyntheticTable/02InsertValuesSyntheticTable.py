@@ -43,7 +43,7 @@ def generate_and_insert_data(num_entries, num_anomalies):
 
             # Insert data into the database
             cursor.execute(
-                "INSERT INTO dummytable (normal_dist, poisson_dist, exponential_dist, uniform_dist, random_dist, modulo) VALUES (%s, %s, %s, %s, %s, %s)",
+                "INSERT INTO SyntheticTable (normal_dist, poisson_dist, exponential_dist, uniform_dist, random_dist, modulo) VALUES (%s, %s, %s, %s, %s, %s)",
                 data)
 
         connection.commit()

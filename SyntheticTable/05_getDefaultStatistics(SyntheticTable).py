@@ -16,10 +16,10 @@ def analyze_and_fetch_stats():
     cur = conn.cursor()
 
     # Run ANALYZE command on table1
-    cur.execute("ANALYZE table1;")
+    cur.execute("ANALYZE synthetictable;")
 
     # Queries to fetch table statistics
-    tables = ['table1', 'table2', 'table3']
+    tables = ['synthetictable']
     for table in tables:
         print(f"Statistics for {table}:")
         cur.execute("""

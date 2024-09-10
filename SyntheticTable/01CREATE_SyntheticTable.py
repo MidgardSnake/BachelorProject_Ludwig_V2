@@ -2,7 +2,7 @@ import psycopg2
 from psycopg2 import sql
 
 
-def create_dummy_table():
+def create_syntheticTable():
     # Verbindungsdaten
     conn = psycopg2.connect(
         dbname="postgres",
@@ -17,7 +17,7 @@ def create_dummy_table():
 
     # SQL-Befehl zum Erstellen der Tabelle
     create_table_command = """
-    CREATE TABLE DummyTable (
+    CREATE TABLE SyntheticTable (
         normal_dist INTEGER,
         poisson_dist INTEGER,
         exponential_dist INTEGER,
@@ -37,8 +37,8 @@ def create_dummy_table():
     cur.close()
     conn.close()
 
-    print("Tabelle 'DummyTable' wurde erfolgreich erstellt.")
+    print("Tabelle 'SyntheticTable' wurde erfolgreich erstellt.")
 
 
 # Funktion aufrufen
-create_dummy_table()
+create_syntheticTable()

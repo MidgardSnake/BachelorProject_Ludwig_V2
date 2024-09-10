@@ -2,9 +2,9 @@
 SELECT *
 FROM pg_class;
 
-SELECT oid, relpages, reltuples
+SELECT oid, relname, relpages, reltuples
 FROM pg_class
-WHERE relname = 'aka_name'
+WHERE relname in ('aka_name','aka_title')
 ; -- relpages = 11.396 ; reltuples = 901.343
 
 
