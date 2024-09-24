@@ -1,4 +1,4 @@
-EXPLAIN ANALYZE
+
 
 SELECT at.title, n.name, at.production_year
 FROM aka_name AS an
@@ -9,8 +9,4 @@ FROM aka_name AS an
 
 WHERE n.name = 'Depp, Johnny' and t.title = 'Blow'
 ;
-
-SELECT *
-FROM title
-WHERE title = 'Blow';
 
