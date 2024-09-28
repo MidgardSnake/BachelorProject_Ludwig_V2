@@ -16,3 +16,9 @@ ANALYZE table3;
 SELECT *
 FROM pg_stats
 WHERE tablename = 'table3';
+
+
+ANALYZE synthetictable;
+SELECT *
+FROM pg_stats
+WHERE tablename = 'synthetictable';

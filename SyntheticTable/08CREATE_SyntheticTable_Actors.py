@@ -12,33 +12,33 @@ def create_syntheticTable():
         port="5432"
     )
 
-    # Cursor zum Ausführen von SQL-Befehlen erstellen
+    # Cursor
     cur = conn.cursor()
 
     # SQL-Befehl zum Erstellen der Tabelle
     create_table_command = """
-    CREATE TABLE SyntheticTable (
-        normal_dist INTEGER,
-        poisson_dist INTEGER,
-        exponential_dist INTEGER,
-        uniform_dist INTEGER,
-        random_dist INTEGER,
-        modulo INTEGER
+    CREATE TABLE SyntheticTable_Actors (
+        id INTEGER,
+        name VARCHAR,
+        birthyear INTEGER
     );
     """
 
-    # SQL-Befehl ausführen
+    create_table_command1 = """
+        DROP TABLE SyntheticTable_Actors;
+        """
+
+
     cur.execute(create_table_command)
-
-    # Änderungen in der Datenbank speichern
     conn.commit()
-
-    # Cursor und Verbindung schließen
     cur.close()
     conn.close()
 
-    print("Tabelle 'SyntheticTable' wurde erfolgreich erstellt.")
+    print("Tabelle 'SyntheticTable_Actors' wurde erfolgreich erstellt.")
 
 
 # Funktion aufrufen
 create_syntheticTable()
+
+
+

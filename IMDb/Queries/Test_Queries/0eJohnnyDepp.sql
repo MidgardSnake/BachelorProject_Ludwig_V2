@@ -1,12 +1,16 @@
 
+EXPLAIN ANALYSE
+SELECT n.name, Count(*) as counter--n.name, n.id
+FROM name AS n
+Group by n.name
+order by counter desc
+;
 
-SELECT at.title, n.name, at.production_year
-FROM aka_name AS an
-    JOIN cast_info ci ON an.id = ci.person_id
-    JOIN title t ON t.id = ci.movie_id
-    JOIN aka_title at ON at.movie_id = t.id
-    JOIN name n ON n.id = an.id
 
-WHERE n.name = 'Depp, Johnny' and t.title = 'Blow'
+EXPLAIN ANALYSE
+SELECT  n.name
+FROM name AS n
+
+WHERE n.name = 'Depp, Johnny'
 ;
 

@@ -98,6 +98,12 @@ FROM pg_stats
 WHERE tablename = 'movie_link'
 ; --relpages =163; reltuples = 29.997
 
+
+SET default_statistics_target = 100;
+ANALYZE name;
+SHOW default_statistics_target ;
+
+
 SELECT attname, n_distinct, most_common_vals, most_common_freqs, histogram_bounds, correlation
 FROM pg_stats
 WHERE tablename =  'name'
