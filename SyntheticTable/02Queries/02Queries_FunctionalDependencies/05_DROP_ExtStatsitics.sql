@@ -3,7 +3,7 @@
 DROP STATISTICS modulo_dependency;
 
 
-ANALYSE dummytable;
+ANALYSE synthetictable;
 
 SELECT stxname, stxkeys,stxddependencies
 FROM pg_statistic_ext

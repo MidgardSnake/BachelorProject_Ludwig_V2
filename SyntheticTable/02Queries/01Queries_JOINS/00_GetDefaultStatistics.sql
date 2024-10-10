@@ -1,6 +1,8 @@
 ANALYZE table1;
 
-SELECT Count(*) FROM table3;
+SELECT * FROM table1;
+
+SELECT Count(*) FROM table1;
 
 SELECT *
 FROM pg_stats

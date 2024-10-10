@@ -2,9 +2,12 @@
 
 CREATE STATISTICS modulo_dependency (dependencies )
 ON modulo, normal_dist
-FROM dummytable;
+FROM synthetictable;
 
-ANALYSE dummytable;
+ANALYSE synthetictable;
+
+EXPLAIN ANALYZE SELECT * FROM synthetictable
+WHERE normal_dist =500 AND modulo = 0;
 
 SELECT stxname, stxkeys,stxddependencies
 FROM pg_statistic_ext

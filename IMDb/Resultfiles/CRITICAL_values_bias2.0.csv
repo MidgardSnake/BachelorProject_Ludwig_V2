@@ -919,7 +919,7 @@ Query Name,Estimated Rows,Actual Rows,Relation Name,Node Type,Join Type,Scan Dir
 4c.sql :,182,4317,XXX,Hash,XXX,XXX,Hash Join
 4c.sql :,182,4317,XXX,Hash Join,Inner,XXX,Hash
 5a.sql :,1614,8008,movie_companies,Seq Scan,XXX,XXX,Hash Join
-5b.sql :,28,473,movie_companies,Seq Scan,XXX,XXX,Hash Join
+1a_5b.sql :,28,473,movie_companies,Seq Scan,XXX,XXX,Hash Join
 5c.sql :,20028,223,XXX,Hash Join,Inner,XXX,Aggregate
 5c.sql :,20028,223,XXX,Nested Loop,Inner,XXX,Hash Join
 5c.sql :,29055,230,XXX,Hash Join,Inner,XXX,Nested Loop

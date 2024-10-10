@@ -1572,16 +1572,16 @@ Query Name,Estimated Rows,Actual Rows,Relation Name,Node Type,Join Type,Scan Dir
 5a.sql :,403,0,XXX,Hash Join,Inner,XXX,Hash
 5a.sql :,1614,8008,movie_companies,Seq Scan,XXX,XXX,Hash Join
 5a.sql :,1,0,title,Index Scan,XXX,Forward,Nested Loop
-5b.sql :,2,3,XXX,Gather,XXX,XXX,Aggregate
-5b.sql :,1,0,XXX,Nested Loop,Inner,XXX,Aggregate
-5b.sql :,1,0,XXX,Nested Loop,Inner,XXX,Nested Loop
-5b.sql :,8,0,XXX,Hash Join,Inner,XXX,Nested Loop
-5b.sql :,217129,0,movie_info,Seq Scan,XXX,XXX,Hash Join
-5b.sql :,7,0,XXX,Hash,XXX,XXX,Hash Join
-5b.sql :,7,0,XXX,Hash Join,Inner,XXX,Hash
-5b.sql :,28,473,movie_companies,Seq Scan,XXX,XXX,Hash Join
-5b.sql :,1,0,title,Index Scan,XXX,Forward,Nested Loop
-5b.sql :,1,0,info_type,Index Only Scan,XXX,Forward,Nested Loop
+1a_5b.sql :,2,3,XXX,Gather,XXX,XXX,Aggregate
+1a_5b.sql :,1,0,XXX,Nested Loop,Inner,XXX,Aggregate
+1a_5b.sql :,1,0,XXX,Nested Loop,Inner,XXX,Nested Loop
+1a_5b.sql :,8,0,XXX,Hash Join,Inner,XXX,Nested Loop
+1a_5b.sql :,217129,0,movie_info,Seq Scan,XXX,XXX,Hash Join
+1a_5b.sql :,7,0,XXX,Hash,XXX,XXX,Hash Join
+1a_5b.sql :,7,0,XXX,Hash Join,Inner,XXX,Hash
+1a_5b.sql :,28,473,movie_companies,Seq Scan,XXX,XXX,Hash Join
+1a_5b.sql :,1,0,title,Index Scan,XXX,Forward,Nested Loop
+1a_5b.sql :,1,0,info_type,Index Only Scan,XXX,Forward,Nested Loop
 5c.sql :,2,3,XXX,Gather,XXX,XXX,Aggregate
 5c.sql :,20028,223,XXX,Hash Join,Inner,XXX,Aggregate
 5c.sql :,20028,223,XXX,Nested Loop,Inner,XXX,Hash Join
