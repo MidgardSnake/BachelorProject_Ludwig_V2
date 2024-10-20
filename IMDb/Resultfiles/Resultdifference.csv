@@ -1,0 +1,17 @@
+Query Name,Relation Name,Node Type,Join Type,Scan Direction,Parent Node Type,Deviation (in rows)
+8d.sql :,XXX,Gather,XXX,XXX,Aggregate,1
+8d.sql :,XXX,Hash Join,Inner,XXX,Aggregate,2568951
+8d.sql :,aka_name,Seq Scan,XXX,XXX,Hash Join,75112
+8d.sql :,XXX,Hash,XXX,XXX,Hash Join,1009153
+8d.sql :,XXX,Nested Loop,Inner,XXX,Hash,1009153
+8d.sql :,XXX,Hash Join,Inner,XXX,Nested Loop,1009153
+8d.sql :,XXX,Hash Join,Inner,XXX,Hash Join,1167766
+8d.sql :,cast_info,Seq Scan,XXX,XXX,Hash Join,3037345
+8d.sql :,XXX,Hash,XXX,XXX,Hash Join,7899
+8d.sql :,XXX,Hash Join,Inner,XXX,Hash,7899
+8d.sql :,title,Seq Scan,XXX,XXX,Hash Join,210806
+8d.sql :,XXX,Hash,XXX,XXX,Hash Join,7899
+8d.sql :,XXX,Hash Join,Inner,XXX,Hash,7899
+8d.sql :,movie_companies,Seq Scan,XXX,XXX,Hash Join,217427
+8d.sql :,XXX,Hash,XXX,XXX,Hash Join,21627
+8d.sql :,company_name,Seq Scan,XXX,XXX,Hash,34935

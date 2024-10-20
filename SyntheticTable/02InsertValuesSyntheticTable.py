@@ -1,7 +1,5 @@
 import psycopg2
-import numpy as np
 import random
-
 
 def generate_and_insert_data(num_entries, num_anomalies):
     # Database connection setup
@@ -15,36 +13,31 @@ def generate_and_insert_data(num_entries, num_anomalies):
     cursor = connection.cursor()
 
     try:
-        for i in range(num_entries):
-            normal = int(round(np.clip(np.random.normal(250, 125), -500, 500), 1))
-            poisson = int(np.clip(np.random.poisson(250) - 250, -500, 500))
-            exponential = int(np.clip(np.random.exponential(250) - 250, -500, 500))
-            uniform = int(np.random.uniform(-500, 500))
-            random_val = int(np.clip(np.random.lognormal(mean=5, sigma=0.5) - 150, -500, 500))
-            modulo = normal % 10
+        # Zufällige Positionen für die Anomalien generieren, die sich nicht am Anfang befinden
+        anomaly_positions = random.sample(range(100, num_entries), num_anomalies)
+        count = 1
 
-            if i < num_anomalies:
-                normal *= random.choice([1, -1])
-                modulo = normal % 10
-                poisson *= random.choice([1, -1])
-                exponential *= random.choice([1, -1])
-                uniform *= random.choice([1, -1])
-                random_val *= random.choice([1, -1])
+        for i in range(1, num_entries + 1):
+            # Generate exponential values where 1 appears once, 2 appears twice, 3 appears three times, etc.
+            exponential = count
 
-            # Convert numpy data types to native Python types
-            data = (
-                int(normal),
-                int(poisson),
-                int(exponential),
-                int(uniform),
-                int(random_val),
-                int(modulo)
-            )
+            # Calculate modulo 10 of exponential value
+            modulo = exponential % 10
+
+            # Check if the current index is an anomaly position
+            if i in anomaly_positions:
+                exponential = random.randint(0, 100)  # Random anomaly value between 0 and 100
+                modulo = exponential % 10
 
             # Insert data into the database
             cursor.execute(
-                "INSERT INTO SyntheticTable (normal_dist, poisson_dist, exponential_dist, uniform_dist, random_dist, modulo) VALUES (%s, %s, %s, %s, %s, %s)",
-                data)
+                "INSERT INTO SyntheticTable (exponential_dist, modulo) VALUES (%s, %s)",
+                (int(exponential), int(modulo))
+            )
+
+            # Adjust count to follow the exponential pattern (1 appears once, 2 appears twice, etc.)
+            if i >= (count * (count + 1)) // 2:
+                count += 1
 
         connection.commit()
         print("Data inserted successfully.")
@@ -57,5 +50,6 @@ def generate_and_insert_data(num_entries, num_anomalies):
 
 
 # Configuration
-anomalies = random.randint(10, 30)
-generate_and_insert_data(10000, anomalies)
+num_entries = 10000
+anomalies = random.randint(3, 5)  # Number of anomalies between 3 and 5
+generate_and_insert_data(num_entries, anomalies)

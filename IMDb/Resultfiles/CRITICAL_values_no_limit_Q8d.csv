@@ -1,0 +1,19 @@
+Query Name,Estimated Rows,Actual Rows,Relation Name,Node Type,Join Type,Scan Direction,Parent Node Type
+8d.sql :,2,3,XXX,Gather,XXX,XXX,Aggregate
+8d.sql :,2676619,107668,XXX,Hash Join,Inner,XXX,Aggregate
+8d.sql :,375560,300448,aka_name,Seq Scan,XXX,XXX,Hash Join
+8d.sql :,1104332,95179,XXX,Hash,XXX,XXX,Hash Join
+8d.sql :,1104332,95179,XXX,Nested Loop,Inner,XXX,Hash
+8d.sql :,1104332,95179,XXX,Hash Join,Inner,XXX,Nested Loop
+8d.sql :,1259900,92134,XXX,Hash Join,Inner,XXX,Hash Join
+8d.sql :,15118793,12081448,cast_info,Seq Scan,XXX,XXX,Hash Join
+8d.sql :,392498,384599,XXX,Hash,XXX,XXX,Hash Join
+8d.sql :,392498,384599,XXX,Hash Join,Inner,XXX,Hash
+8d.sql :,1053577,842771,title,Seq Scan,XXX,XXX,Hash Join
+8d.sql :,392498,384599,XXX,Hash,XXX,XXX,Hash Join
+8d.sql :,392498,384599,XXX,Hash Join,Inner,XXX,Hash
+8d.sql :,1087137,869710,movie_companies,Seq Scan,XXX,XXX,Hash Join
+8d.sql :,49908,28281,XXX,Hash,XXX,XXX,Hash Join
+8d.sql :,49908,84843,company_name,Seq Scan,XXX,XXX,Hash
+
+

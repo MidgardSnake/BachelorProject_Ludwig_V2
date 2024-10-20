@@ -18,11 +18,7 @@ def create_syntheticTable():
     # SQL-Befehl zum Erstellen der Tabelle
     create_table_command = """
     CREATE TABLE SyntheticTable (
-        normal_dist INTEGER,
-        poisson_dist INTEGER,
         exponential_dist INTEGER,
-        uniform_dist INTEGER,
-        random_dist INTEGER,
         modulo INTEGER
     );
     """

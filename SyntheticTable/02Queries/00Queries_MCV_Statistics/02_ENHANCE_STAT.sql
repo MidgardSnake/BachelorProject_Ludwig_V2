@@ -1,11 +1,11 @@
 
 
-ALTER TABLE synthetictable ALTER COLUMN normal_dist  SET STATISTICS 101;
+ALTER TABLE synthetictable ALTER COLUMN exponential_dist  SET STATISTICS 101;
 
 ANALYSE synthetictable;
 
-EXPLAIN (ANALYZE,BUFFERS) SELECT *
+EXPLAIN (ANALYZE) SELECT *
 FROM synthetictable
-WHERE normal_dist = 359;-- falsch 13 vs 29
+WHERE exponential_dist = 42;
 
 

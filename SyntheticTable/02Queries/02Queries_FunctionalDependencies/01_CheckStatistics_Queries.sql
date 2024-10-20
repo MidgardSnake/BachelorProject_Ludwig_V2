@@ -6,22 +6,22 @@ ANALYZE synthetictable;
 --1. check distinct values
 SELECT COUNT(*)
 FROM
-    (SELECT DISTINCT (normal_dist)
+    (SELECT DISTINCT (exponential_dist)
     FROM synthetictable
-    ORDER BY normal_dist) as dnd;
+    ORDER BY exponential_dist) as dnd;
 
 
 --2. check most common vals + check most frequent vals
 SELECT
-    normal_dist,
-    Count(normal_dist) as Count,
-    COUNT(normal_dist) * 1.0 / SUM(COUNT(normal_dist)) OVER () AS Frequency
+    exponential_dist,
+    Count(exponential_dist) as Count,
+    COUNT(exponential_dist) * 1.0 / SUM(COUNT(exponential_dist)) OVER () AS Frequency
 FROM synthetictable
-GROUP BY normal_dist
+GROUP BY exponential_dist
 ORDER BY count DESC;
 
 --3. check histogram roughly - hier für normal_dist
-SELECT MIN(normal_dist), MAX(normal_dist)
+SELECT MIN(exponential_dist), MAX(exponential_dist)
 FROM synthetictable;
 
 /*

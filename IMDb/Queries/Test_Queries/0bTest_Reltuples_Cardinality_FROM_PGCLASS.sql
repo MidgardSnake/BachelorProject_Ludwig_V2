@@ -90,3 +90,15 @@ FROM title ; -- 2.528.312
 
 SELECT table_name
 FROM information_schema.tables;
+
+SHOW default_statistics_target;
+
+
+SELECT oid, relname, reltuples
+FROM pg_class
+WHERE relname in (
+    'aka_name', 'aka_title', 'cast_info',
+    'char_name', 'comp_cast_type', 'company_name',
+    'company_type', 'complete_cast','info_type','keyword','kind_type', 'link_type',
+    'movie_companies',
+    'movie_info','movie_info_idx', 'movie_keyword', 'movie_link','name','person_info','role_type','title_count');

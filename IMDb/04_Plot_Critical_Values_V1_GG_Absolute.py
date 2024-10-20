@@ -43,7 +43,7 @@ class QueryAnalyzer:
         sns.boxplot(x='Query Name', y='Deviation (in rows)', data=self.df, showfliers=True)
 
         # Set the title and labels
-        plt.title('Complete List of all misestimations [Error deviation of 1000%] ')
+        plt.title('absolute misestimations')
         plt.xlabel('Query Name')
         plt.xticks(rotation=45, ha='right')
         plt.ylabel('Deviation (in rows)')
@@ -60,6 +60,7 @@ class QueryAnalyzer:
         # Show plot
         plt.tight_layout()
         plt.show()
+        print("END")
 
     def analyze_and_plot(self):
         self.filter_queries()
@@ -68,5 +69,6 @@ class QueryAnalyzer:
 
 
 # Example usage:
-analyzer = QueryAnalyzer('/Users/lui/PycharmProjects/BachelorProject_Ludwig_V2/IMDb/Resultfiles/CRITICAL_values_no_limit.csv')
+#analyzer = QueryAnalyzer('/Users/lui/PycharmProjects/BachelorProject_Ludwig_V2/IMDb/Resultfiles/CRITICAL_values_no_limit.csv')
+analyzer = QueryAnalyzer('/Users/lui/PycharmProjects/BachelorProject_Ludwig_V2/IMDb/Resultfiles/CRITICAL_values_no_limit_Q8d.csv')
 analyzer.analyze_and_plot()

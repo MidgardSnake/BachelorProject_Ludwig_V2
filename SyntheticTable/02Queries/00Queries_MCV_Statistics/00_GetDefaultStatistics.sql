@@ -1,17 +1,17 @@
 SELECT Count(*) FROM synthetictable;
 
-SELECT * FROM synthetictable FETCH FIRST 15 ROWS ONLY;
+SELECT * FROM synthetictable FETCH FIRST 100 ROWS ONLY;
 
-ANALYZE table1;
+ANALYZE synthetictable;
 
 SELECT *
 FROM pg_stats
 WHERE tablename = 'synthetictable';
 
 --tatsächliche MCV's
-SELECT  normal_dist, Count(normal_dist) counter
+SELECT  exponential_dist, Count(exponential_dist) counter
 FROM synthetictable
-GROUP BY normal_dist
+GROUP BY exponential_dist
 ORDER BY counter DESC;
 -- mcv 1 = 500/224 ; mcv100 = 244/29 ; mcv101 359/29; mcv200 126/13
 

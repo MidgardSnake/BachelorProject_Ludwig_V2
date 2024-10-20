@@ -67,3 +67,27 @@ FROM title ; -- 2.528.312
 
 SELECT table_name
 FROM information_schema.tables;
+
+
+SELECT
+    (SELECT COUNT(*) FROM aka_name) AS aka_name_count,
+    (SELECT COUNT(*) FROM aka_title) AS aka_title_count,
+    (SELECT COUNT(*) FROM cast_info) AS cast_info_count,
+    (SELECT COUNT(*) FROM char_name) AS char_name_count,
+    (SELECT COUNT(*) FROM comp_cast_type) AS comp_cast_type_count,
+    (SELECT COUNT(*) FROM company_name) AS company_name_count,
+    (SELECT COUNT(*) FROM company_type) AS company_type_count,
+    (SELECT COUNT(*) FROM complete_cast) AS complete_cast_count,
+    (SELECT COUNT(*) FROM info_type) AS info_type_count,
+    (SELECT COUNT(*) FROM keyword) AS keyword_count,
+    (SELECT COUNT(*) FROM kind_type) AS kind_type_count,
+    (SELECT COUNT(*) FROM link_type) AS link_type_count,
+    (SELECT COUNT(*) FROM movie_companies) AS movie_companies_count,
+    (SELECT COUNT(*) FROM movie_info) AS movie_info_count,
+    (SELECT COUNT(*) FROM movie_info_idx) AS movie_info_idx_count,
+    (SELECT COUNT(*) FROM movie_keyword) AS movie_keyword_count,
+    (SELECT COUNT(*) FROM movie_link) AS movie_link_count,
+    (SELECT COUNT(*) FROM name) AS name_count,
+    (SELECT COUNT(*) FROM person_info) AS person_info_count,
+    (SELECT COUNT(*) FROM role_type) AS role_type_count,
+    (SELECT COUNT(*) FROM title) AS title_count;
