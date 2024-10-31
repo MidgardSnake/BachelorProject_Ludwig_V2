@@ -1,4 +1,4 @@
-exponential_dist,modulo
+linear_dist,modulo
 1,1
 2,2
 2,2
@@ -378,6 +378,7 @@ exponential_dist,modulo
 27,7
 27,7
 28,8
+91,1
 28,8
 28,8
 28,8
@@ -404,7 +405,6 @@ exponential_dist,modulo
 28,8
 28,8
 28,8
-28,8
 29,9
 29,9
 29,9
@@ -632,6 +632,7 @@ exponential_dist,modulo
 36,6
 36,6
 36,6
+15,5
 36,6
 36,6
 36,6
@@ -664,7 +665,6 @@ exponential_dist,modulo
 36,6
 36,6
 36,6
-36,6
 37,7
 37,7
 37,7
@@ -7227,7 +7227,6 @@ exponential_dist,modulo
 120,0
 120,0
 120,0
-58,8
 120,0
 120,0
 120,0
@@ -7259,6 +7258,7 @@ exponential_dist,modulo
 120,0
 120,0
 120,0
+120,0
 121,1
 121,1
 121,1
@@ -7654,7 +7654,6 @@ exponential_dist,modulo
 124,4
 124,4
 124,4
-3,3
 124,4
 124,4
 124,4
@@ -7749,6 +7748,7 @@ exponential_dist,modulo
 124,4
 124,4
 124,4
+124,4
 125,5
 125,5
 125,5
@@ -8000,7 +8000,6 @@ exponential_dist,modulo
 126,6
 126,6
 126,6
-127,7
 127,7
 127,7
 127,7
@@ -8106,6 +8105,7 @@ exponential_dist,modulo
 127,7
 127,7
 127,7
+35,5
 127,7
 127,7
 127,7
@@ -9479,6 +9479,7 @@ exponential_dist,modulo
 138,8
 138,8
 138,8
+12,2
 138,8
 138,8
 138,8
@@ -9589,7 +9590,6 @@ exponential_dist,modulo
 138,8
 138,8
 138,8
-138,8
 139,9
 139,9
 139,9
@@ -9869,6 +9869,7 @@ exponential_dist,modulo
 140,0
 140,0
 140,0
+141,1
 141,1
 141,1
 141,1
@@ -9960,7 +9961,6 @@ exponential_dist,modulo
 141,1
 141,1
 141,1
-24,4
 141,1
 141,1
 141,1

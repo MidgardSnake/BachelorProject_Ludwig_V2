@@ -18,7 +18,7 @@ def create_syntheticTable():
     # SQL-Befehl zum Erstellen der Tabelle
     create_table_command = """
     CREATE TABLE SyntheticTable (
-        exponential_dist INTEGER,
+        linear_dist INTEGER,
         modulo INTEGER
     );
     """

@@ -2,7 +2,7 @@ show default_statistics_target;
 
 SET default_statistics_target = 100;
 
---Queryplan
+/*01 Queryplan in general*/
 EXPLAIN ANALYZE
 
 SELECT MIN(t.title) AS american_vhs_movie
@@ -24,8 +24,15 @@ WHERE ct.kind = 'production companies'
   AND ct.id = mc.company_type_id
   AND it.id = mi.info_type_id;
 
+/*02 actual Query*/
+SELECT Count(*)
+FROM movie_companies mc
+WHERE mc.note LIKE '%(VHS)%'
+  AND mc.note LIKE '%(USA)%'
+  AND mc.note LIKE '%(1994)%';
 
-EXPLAIN ANALYSE SELECT Count(*)
+/*03 estimated Queryplan*/
+EXPLAIN  ANALYZE SELECT Count(*)
 FROM movie_companies mc
 WHERE mc.note LIKE '%(VHS)%'
   AND mc.note LIKE '%(USA)%'
@@ -33,7 +40,9 @@ WHERE mc.note LIKE '%(VHS)%'
 
 CREATE INDEX idx_mc_partial_note ON movie_companies (note)
 WHERE note LIKE '%(VHS)%' AND note LIKE '%(USA)%' AND note LIKE '%(1994)%';
-ALTER TABLE movie_companies ALTER COLUMN note SET STATISTICS 100;
+
+DROP INDEX idx_mc_partial_note;
+ALTER TABLE movie_companies ALTER COLUMN note SET STATISTICS 200;
 ALTER TABLE movie_companies ALTER COLUMN note SET STATISTICS -1;
 
 ANALYZE movie_companies;

@@ -33,7 +33,7 @@ def plot_distribution(file_path):
     plt.legend()
 
     # Titel und Labels hinzufügen
-    plt.title('Distribution of Exponential and Modulo Columns')
+    plt.title('Distribution of Linear and Modulo Columns')
     plt.xlabel('Value')
     plt.ylabel('Frequency in rows')
 

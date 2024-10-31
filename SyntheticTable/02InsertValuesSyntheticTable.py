@@ -18,24 +18,24 @@ def generate_and_insert_data(num_entries, num_anomalies):
         count = 1
 
         for i in range(1, num_entries + 1):
-            # Generate exponential values where 1 appears once, 2 appears twice, 3 appears three times, etc.
-            exponential = count
+            # Generate linear values where 1 appears once, 2 appears twice, 3 appears three times, etc.
+            linear = count
 
-            # Calculate modulo 10 of exponential value
-            modulo = exponential % 10
+            # Calculate modulo 10 of linear value
+            modulo = linear % 10
 
             # Check if the current index is an anomaly position
             if i in anomaly_positions:
-                exponential = random.randint(0, 100)  # Random anomaly value between 0 and 100
-                modulo = exponential % 10
+                linear = random.randint(0, 100)  # Random anomaly value between 0 and 100
+                modulo = linear % 10
 
             # Insert data into the database
             cursor.execute(
-                "INSERT INTO SyntheticTable (exponential_dist, modulo) VALUES (%s, %s)",
-                (int(exponential), int(modulo))
+                "INSERT INTO SyntheticTable (linear_dist, modulo) VALUES (%s, %s)",
+                (int(linear), int(modulo))
             )
 
-            # Adjust count to follow the exponential pattern (1 appears once, 2 appears twice, etc.)
+            # Adjust count to follow the linear pattern (1 appears once, 2 appears twice, etc.)
             if i >= (count * (count + 1)) // 2:
                 count += 1
 
