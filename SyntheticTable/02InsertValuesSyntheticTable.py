@@ -31,7 +31,7 @@ def generate_and_insert_data(num_entries, num_anomalies):
 
             # Insert data into the database
             cursor.execute(
-                "INSERT INTO SyntheticTable (linear_dist, modulo) VALUES (%s, %s)",
+                "INSERT INTO SyntheticTableBIG (linear_dist, modulo) VALUES (%s, %s)",
                 (int(linear), int(modulo))
             )
 
@@ -50,6 +50,6 @@ def generate_and_insert_data(num_entries, num_anomalies):
 
 
 # Configuration
-num_entries = 10000
+num_entries = 1000000
 anomalies = random.randint(3, 5)  # Number of anomalies between 3 and 5
 generate_and_insert_data(num_entries, anomalies)

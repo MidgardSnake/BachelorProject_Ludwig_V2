@@ -11,11 +11,11 @@ ORDER BY counter DESC;
 
 EXPLAIN ANALYZE SELECT *
 FROM synthetictable
-WHERE exponential_dist = 41; -- richtig 41
+WHERE linear_dist = 41; -- richtig 41
 
 EXPLAIN SELECT *
 FROM synthetictable
-WHERE exponential_dist = 40; --richtig 29
+WHERE linear_dist = 40; --richtig 29
 
 
 

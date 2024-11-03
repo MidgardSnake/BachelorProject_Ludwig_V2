@@ -4,10 +4,14 @@ import matplotlib.pyplot as plt
 def plot_distribution(file_path):
     # Einlesen der Daten
     data = pd.read_csv(file_path, header=None)
-    data.columns = ['Exponential', 'Modulo']
+    data.columns = ['Linear', 'Modulo']
 
-    # Attempt to convert all columns to numeric, invalid parsing will be set as NaN
+    # Konvertiere alle Spalten in numerische Werte, setze ungültige Umwandlungen als NaN
     data = data.apply(pd.to_numeric, errors='coerce')
+
+    # Gruppiere und zähle die Häufigkeit jedes Wertes in beiden Spalten
+    linear_counts = data['Linear'].value_counts().sort_index()
+    modulo_counts = data['Modulo'].value_counts().sort_index()
 
     # Farben für die Graphen definieren
     colors = ['blue', 'green']
@@ -15,29 +19,19 @@ def plot_distribution(file_path):
     # Plot erstellen
     plt.figure(figsize=(12, 8))
 
-    # Durch jede Spalte iterieren und ein Histogramm erstellen
-    for index, column in enumerate(data.columns):
-        column_data = data[column].dropna()  # Drop NaN values resulting from invalid conversions
-        plt.hist(column_data, bins=50, color=colors[index], alpha=0.6, label=f'{column} distribution')
-
-        # Anomalien identifizieren (beispielhaft als Werte außerhalb von 3 Standardabweichungen)
-        mean = column_data.mean()
-        std = column_data.std()
-        anomalies = column_data[(column_data < mean - 3 * std) | (column_data > mean + 3 * std)]
-
-        # Anomalien markieren
-        for anomaly in anomalies:
-            plt.plot(anomaly, 0, marker='X', markersize=10, color=colors[index])
+    # Balkendiagramme für die tatsächlichen Anzahlen erstellen
+    plt.bar(linear_counts.index - 0.3, linear_counts.values, color=colors[0], width=0.4, label='Linear distribution')
+    plt.bar(modulo_counts.index + 0.3, modulo_counts.values, color=colors[1], width=0.4, label='Modulo distribution')
 
     # Legende hinzufügen
     plt.legend()
 
-    # Titel und Labels hinzufügen
-    plt.title('Distribution of Linear and Modulo Columns')
+    # Titel und Labels anpassen
+    plt.title('Actual Counts of Linear and Modulo Columns')
     plt.xlabel('Value')
-    plt.ylabel('Frequency in rows')
+    plt.ylabel('Actual Row Count')
 
-    # Ergebnis zeigen
+    # Ergebnis anzeigen
     plt.show()
 
 # Pfad zur Datei, passe diesen an deinen Dateipfad an
