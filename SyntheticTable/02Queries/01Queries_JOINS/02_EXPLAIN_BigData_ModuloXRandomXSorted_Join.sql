@@ -11,16 +11,55 @@ ANALYZE table3;
 EXPLAIN ANALYZE
 SELECT *
 FROM table3 t3
-INNER JOIN table1 t1 ON t1.nkey = t3.nkey
-INNER JOIN table2 t2 ON t2.nkey = t1.nkey;
+INNER JOIN table2 t2 ON t2.id = t3.ref_id
+INNER JOIN table1 t1 ON t1.id = t2.ref_id
+WHERE t1.a = 43 AND t1.b = 43;
 
 
---1. declarative change - verbessert nicht
+--1. zwei Filterbedingung auf zwei Tabellen ohne stats
 EXPLAIN ANALYZE
 SELECT *
 FROM table1 t1
-INNER JOIN table2 t2 ON t2.nkey = t1.nkey
-INNER JOIN table3 t3 ON t3.nkey = t1.nkey;
+INNER JOIN table2 t2 ON t2.ref_id = t1.id
+INNER JOIN table3 t3 ON t3.ref_id = t2.id
+WHERE   t2.a = 43 AND t2.b = 43
+AND t3.a = 43 AND t3.b = 43
+;
+
+CREATE STATISTICS t3ab (dependencies )
+ON a, b
+FROM table3;
+
+CREATE STATISTICS t2ab (dependencies )
+ON a, b
+FROM table2;
+
+CREATE INDEX idx_table2_a_b ON table2 (a, b);
+CREATE INDEX idx_table3_a_b ON table3 (a, b);
+ANALYZE table3;
+ANALYZE table2;
+
+
+
+DROP INDEX idx_table2_a_b;
+DROP INDEX idx_table3_a_b;
+
+
+
+ANALYSE table3;
+
+--2. zwei Filterbedingung auf zwei Tabellen mit stats
+EXPLAIN ANALYZE
+SELECT *
+FROM table1 t1
+INNER JOIN table2 t2 ON t2.ref_id = t1.id
+INNER JOIN table3 t3 ON t3.ref_id = t2.id
+WHERE   t2.a = 43 AND t2.b = 43
+AND t3.a = 43 AND t3.b = 43
+;
+
+DROP STATISTICS t3ab ;
+ANALYSE table3;
 
 --2. hashjoin off
 SHOW enable_hashjoin ;

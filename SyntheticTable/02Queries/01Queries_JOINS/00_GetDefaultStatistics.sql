@@ -1,8 +1,10 @@
 ANALYZE table1;
+ANALYZE table2;
+ANALYZE table3;
 
 SELECT * FROM table1;
 
-SELECT Count(*) FROM table3;
+SELECT Count(*) FROM table1;
 
 SELECT relpages,reltuples
 FROM pg_class
@@ -14,24 +16,9 @@ FROM pg_stats
 WHERE tablename = 'table1';
 
 
-ANALYZE table2;
-SELECT *
-FROM pg_stats
-WHERE tablename = 'table2';
-
-ANALYZE table3;
-SELECT *
-FROM pg_stats
-WHERE tablename = 'table3';
-
-
-ANALYZE synthetictable;
-SELECT *
-FROM pg_stats
-WHERE tablename = 'synthetictable';
 
 
 SELECT *
-FROM table1
-ORDER BY nkey desc
+FROM table2
+WHERE id BETWEEN 4999999 and 5000005
 ;
