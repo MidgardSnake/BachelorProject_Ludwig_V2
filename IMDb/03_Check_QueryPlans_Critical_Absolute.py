@@ -22,15 +22,14 @@ def parse_plan(plan, parent_info=""):
         "Parent Info": parent_info
     }
 
-    # Initial check on the current level
+    # Berechne die Differenz
     deviations = []
     if estimated_rows > 0:
+        difference = estimated_rows - actual_rows
         if estimated_rows != actual_rows:
-            deviation1 = abs(actual_rows/estimated_rows)
-            deviation = abs(1-deviation1) +1
-            deviations.append((estimated_rows, actual_rows, deviation, additional_info))
+            deviations.append((estimated_rows, actual_rows, difference, additional_info))
 
-    # Check for nested plans
+    # Überprüfen auf verschachtelte Pläne
     if "Plans" in plan:
         for subplan in plan["Plans"]:
             deviations.extend(parse_plan(subplan, node_type))
@@ -54,17 +53,18 @@ def identify_critical_misestimates(input_file, output_csv):
                 deviations = parse_plan(plan)
 
                 # Prüfen auf kritische Abweichungen
-                for estimated_rows, actual_rows, deviation, additional_info in deviations:
-                        critical_entries.append([
-                            query_name,
-                            estimated_rows,
-                            actual_rows,
-                            additional_info["Relation Name"],
-                            additional_info["Node Type"],
-                            additional_info["Join Type"],
-                            additional_info["Scan Direction"],
-                            additional_info["Parent Info"]
-                        ])
+                for estimated_rows, actual_rows, difference, additional_info in deviations:
+                    critical_entries.append([
+                        query_name,
+                        estimated_rows,
+                        actual_rows,
+                        difference,
+                        additional_info["Relation Name"],
+                        additional_info["Node Type"],
+                        additional_info["Join Type"],
+                        additional_info["Scan Direction"],
+                        additional_info["Parent Info"]
+                    ])
             except (IndexError, ValueError, KeyError, json.JSONDecodeError) as e:
                 print(f"Error processing row: {row}. Error: {e}")
                 continue
@@ -76,6 +76,7 @@ def identify_critical_misestimates(input_file, output_csv):
             'Query Name',
             'Estimated Rows',
             'Actual Rows',
+            'Difference',
             'Relation Name',
             'Node Type',
             'Join Type',
@@ -92,5 +93,3 @@ def identify_critical_misestimates(input_file, output_csv):
 input_file = '/Users/lui/PycharmProjects/BachelorProject_Ludwig_V2/IMDb/Resultfiles/explain_analysis_results.csv'
 output_csv = '/Users/lui/PycharmProjects/BachelorProject_Ludwig_V2/IMDb/Resultfiles/CRITICAL_values_no_limit.csv'
 identify_critical_misestimates(input_file, output_csv)
-
-

@@ -15,6 +15,19 @@ DROP INDEX idx_company_name__name ;
 ALTER TABLE company_name ALTER COLUMN name SET STATISTICS 800;
 
 
+SELECT *
+FROM pg_stats
+WHERE schemaname = 'public'  -- oder der entsprechende Schema-Name
+  AND tablename = 'company_name'
+  AND attname = 'name';
+
+SHOW default_statistics_target;
+
+
+
+
+
+
 ANALYZE company_name;
 
 

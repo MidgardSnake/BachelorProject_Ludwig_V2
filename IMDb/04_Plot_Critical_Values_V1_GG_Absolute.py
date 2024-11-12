@@ -24,7 +24,7 @@ class QueryAnalyzer:
 
     def calculate_deviation(self):
         # Calculate the deviation for each row
-        self.df['Deviation (in rows)'] = self.df['Actual Rows'] - self.df['Estimated Rows']
+        self.df['Deviation (in rows)'] =  self.df['Estimated Rows'] - self.df['Actual Rows']
 
         # Calculate the cumulative deviation for each 'Query Name'
         self.df['Cumulative Deviation'] = self.df.groupby('Query Name')['Deviation (in rows)'].cumsum()
@@ -40,7 +40,7 @@ class QueryAnalyzer:
         plt.figure(figsize=(12, 6))
 
         # Create a boxplot for each query
-        sns.boxplot(x='Query Name', y='Deviation (in rows)', data=self.df, showfliers=True)
+        sns.boxplot(x='Query Name', y='Deviation (in rows)', data=self.df, showfliers=False)
 
         # Set the title and labels
         plt.title('absolute misestimations')
