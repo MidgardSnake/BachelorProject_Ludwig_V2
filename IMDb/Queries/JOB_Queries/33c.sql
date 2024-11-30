@@ -50,3 +50,7 @@ WHERE cn1.country_code != '[us]'
   AND ml.linked_movie_id = mc2.movie_id
   AND mi_idx2.movie_id = mc2.movie_id;
 
+
+
+SELECT DISTINCT gender
+FROM name ;

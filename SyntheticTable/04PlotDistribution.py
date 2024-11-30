@@ -11,7 +11,7 @@ def plot_distribution(file_path):
 
     # Gruppiere und zähle die Häufigkeit jedes Wertes in beiden Spalten
     linear_counts = data['Linear'].value_counts().sort_index()
-    modulo_counts = data['Modulo'].value_counts().sort_index()
+    #modulo_counts = data['Modulo'].value_counts().sort_index()
 
     # Farben für die Graphen definieren
     colors = ['blue', 'green']
@@ -21,7 +21,7 @@ def plot_distribution(file_path):
 
     # Balkendiagramme für die tatsächlichen Anzahlen erstellen
     plt.bar(linear_counts.index - 0.3, linear_counts.values, color=colors[0], width=0.4, label='Linear distribution')
-    plt.bar(modulo_counts.index + 0.3, modulo_counts.values, color=colors[1], width=0.4, label='Modulo distribution')
+    #plt.bar(modulo_counts.index + 0.3, modulo_counts.values, color=colors[1], width=0.4, label='Modulo distribution')
 
     # Legende hinzufügen
     plt.legend()

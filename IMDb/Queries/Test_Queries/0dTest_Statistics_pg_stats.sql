@@ -77,6 +77,7 @@ FROM pg_stats
 WHERE tablename =   'movie_companies'
 ; --relpages = 18.789; reltuples = 2.609.129 = 2.609.129
 
+
 SELECT attname, n_distinct, most_common_vals, most_common_freqs, histogram_bounds, correlation
 FROM pg_stats
 WHERE tablename =  'movie_info'
