@@ -37,6 +37,14 @@ WHERE name LIKE 'work%';
 
 
 
+EXPLAIN ANALYSE SELECT Count (*)
+ FROM movie_companies mc
+ WHERE mc . note LIKE '%(VHS)%'
+ AND mc . note LIKE '%(USA)%'
+ AND mc . note LIKE '%(1994)%' ;
+
+
+
 
 
 

@@ -6,7 +6,7 @@ ANALYZE synthetictable;
 
 SELECT *
 FROM pg_stats
-WHERE tablename = 'synthetictable';
+WHERE tablename = 'synthetictable_actors';
 
 --tatsächliche MCV's für linear
 SELECT  linear_dist, Count(linear_dist) counter
@@ -25,6 +25,10 @@ EXPLAIN ANALYSE SELECT *
 FROM synthetictable
 WHERE linear_dist = '38';
 
+Select count(*)
+FROM
+(SELECT DISTINCT NAME
+FROM synthetictable_actors);
 
 
 

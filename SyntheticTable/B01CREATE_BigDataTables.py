@@ -28,9 +28,10 @@ class DatabaseManager:
         if self.conn is not None:
             with self.conn.cursor() as cursor:
                 try:
-                    query = sql.SQL("CREATE TABLE {table_name} (id BIGINT, a INT, b INT);").format(
-                        table_name=sql.Identifier(table_name)
-                    )
+                    query = sql.SQL(
+                        "CREATE TABLE {table_name} (ref3 INT, id INT, ref2 INT);"
+                    ).format(table_name=sql.Identifier(table_name))
+                    print(f"Executing query: {query.as_string(self.conn)}")
                     cursor.execute(query)
                     self.conn.commit()
                     print(f"Table {table_name} created successfully.")
@@ -42,9 +43,10 @@ class DatabaseManager:
         if self.conn is not None:
             with self.conn.cursor() as cursor:
                 try:
-                    query = sql.SQL("CREATE TABLE {table_name} (ref_id BIGINT, a INT, b INT, id BIGINT);").format(
-                        table_name=sql.Identifier(table_name)
-                    )
+                    query = sql.SQL(
+                        "CREATE TABLE {table_name} (id INT, a INT, b INT);"
+                    ).format(table_name=sql.Identifier(table_name))
+                    print(f"Executing query: {query.as_string(self.conn)}")
                     cursor.execute(query)
                     self.conn.commit()
                     print(f"Table {table_name} created successfully.")
@@ -65,7 +67,7 @@ db_params = {
 }
 db_manager = DatabaseManager(**db_params)
 db_manager.connect()
-db_manager.create_table_base('table1')
-db_manager.create_table_ref('table2')
-db_manager.create_table_ref('table3')
+db_manager.create_table_base('tablex1')  # tableX1 with ref3, id, and ref2
+db_manager.create_table_ref('tablex2')  # tableX2 with id, a, and b
+db_manager.create_table_ref('tablex3')  # tableX3 with id, a, and b
 db_manager.close()

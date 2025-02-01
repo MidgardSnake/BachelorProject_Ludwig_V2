@@ -58,7 +58,7 @@ WHERE note LIKE '%(VHS)%' AND note LIKE '%(USA)%' AND note LIKE '%(1994)%';
 DROP INDEX idx_mc_partial_note;
 
 /*05 enhance statistics on movie_companies*/
-ALTER TABLE movie_companies ALTER COLUMN note SET STATISTICS 200;
+ALTER TABLE movie_companies ALTER COLUMN note SET STATISTICS 6000;
 ALTER TABLE movie_companies ALTER COLUMN note SET STATISTICS -1;
 
 ANALYZE movie_companies;
